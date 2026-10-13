@@ -1,0 +1,64 @@
+/* Ensure all animated elements stay visible */
+.elementor-invisible {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Ensure SplitText headings are visible and styled */
+.split-line div,
+.at-heading-animation div,
+.at-heading-animation span {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+/* Ensure journey section background image displays reliably */
+.elementor-4074 .elementor-element.elementor-element-4c81cf7,
+.elementor-element-4c81cf7 {
+    background-image: url("../images/story-bg-image-metal.jpg") !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    min-height: 480px !important;
+}
+
+/* Team card image positioning */
+.team-item-metal {
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 20px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.team-item-image-metal,
+.team-item-image-metal img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1.24 !important;
+    object-fit: cover !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Blog post image styling */
+.elementskit-post-image-card .elementskit-entry-header a.elementskit-entry-thumb,
+.our-blog .elementskit-entry-thumb {
+    display: block !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    border-radius: 14px !important;
+}
+
+.elementskit-post-image-card .elementskit-entry-header img,
+.our-blog .elementskit-entry-thumb img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 10 !important;
+    object-fit: cover !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}

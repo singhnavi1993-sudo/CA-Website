@@ -1,0 +1,16 @@
+body{
+	--e-global-color-primary					: #021623;
+	--e-global-color-secondary					: #FFFFFF;
+	--e-global-color-text						: #535353;
+	--e-global-color-accent						: #1944DF;
+	--e-global-color-accentsecondary			: transparent;
+	--e-global-color-white						: #FFFFFF;
+	--e-global-color-black						: #000000;
+	--e-global-color-divider					: #0216231A;
+	--e-global-color-darkdivider				: #FFFFFF1A;
+	--e-global-color-background             	: #F5F5F5;
+	--e-global-typography-primary-font-family	: "Public Sans", sans-serif;
+	--e-global-typography-secondary-font-family	: "Public Sans", sans-serif;
+	--e-global-typography-text-font-family		: "DM Sans", sans-serif;
+	--e-global-typography-accent-font-family    : "DM Sans", sans-serif;
+}
