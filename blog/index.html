@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blog – Finsta</title>
+<meta content="max-image-preview:large" name="robots"/>
+<link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="cf-frontend-style-inline-css">
+@font-face {
+	font-family: 'Apfel Grotezk';
+	font-style: normal;
+	font-weight: 300;
+	src: url('assets/fonts/ApfelGrotezk-Brukt.ttf') format('truetype'),
+		url('assets/fonts/ApfelGrotezk-Brukt.woff') format('woff'),
+		url('assets/fonts/ApfelGrotezk-Brukt.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Apfel Grotezk';
+	font-style: normal;
+	font-weight: 400;
+	src: url('assets/fonts/ApfelGrotezk-Regular.ttf') format('truetype'),
+		url('assets/fonts/ApfelGrotezk-Regular.woff') format('woff'),
+		url('assets/fonts/ApfelGrotezk-Regular.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Apfel Grotezk';
+	font-style: normal;
+	font-weight: 500;
+	src: url('assets/fonts/ApfelGrotezk-Mittel.ttf') format('truetype'),
+		url('assets/fonts/ApfelGrotezk-Mittel.woff') format('woff'),
+		url('assets/fonts/ApfelGrotezk-Mittel.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Apfel Grotezk';
+	font-style: normal;
+	font-weight: 700;
+	src: url('assets/fonts/ApfelGrotezk-Fett.ttf') format('truetype'),
+		url('assets/fonts/ApfelGrotezk-Fett.woff') format('woff'),
+		url('assets/fonts/ApfelGrotezk-Fett.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Apfel Grotezk';
+	font-style: normal;
+	font-weight: 900;
+	src: url('assets/fonts/ApfelGrotezk-Satt.ttf') format('truetype'),
+		url('assets/fonts/ApfelGrotezk-Satt.woff') format('woff'),
+		url('assets/fonts/ApfelGrotezk-Satt.woff2') format('woff2');
+}
+/*# sourceURL=cf-frontend-style-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link href="../assets/css/blog_style.min.css" id="wp-block-library-css" media="all" rel="stylesheet"/>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:root :where(.wp-block-icon svg){width: 24px;}
+:where(.wp-block-gallery.is-layout-flex){gap: var( --wp--style--gallery-gap-default, var( --gallery-block--gutter-size, var( --wp--style--block-gap, 0.5em ) ) );}:where(.wp-block-gallery.is-layout-grid){gap: var( --wp--style--gallery-gap-default, var( --gallery-block--gutter-size, var( --wp--style--block-gap, 0.5em ) ) );}
+:where(.wp-block-latest-posts.is-layout-flex){gap: 1.25em;}:where(.wp-block-latest-posts.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-term-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-term-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link href="../assets/css/0_styles.css" id="contact-form-7-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/1_frontend.min.css" id="elementor-frontend-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/21_post-226.css" id="elementor-post-226-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/4_common.css" id="ekit-widget-common-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/22_nav-menu.css" id="ekit-nav-menu-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/5_creative-button.css" id="ekit-pro-creative-button-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/about_post-227.css" id="elementor-post-227-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/6_widget-image.min.css" id="widget-image-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/19_social.css" id="ekit-social-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/3_widget-heading.min.css" id="widget-heading-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/24_vertical-menu.css" id="ekit-pro-vertical-menu-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/25_business-hours.css" id="ekit-business-hours-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/10_button.css" id="ekit-button-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/11_icon-box.css" id="ekit-icon-box-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/29_header-search.css" id="ekit-header-search-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/30_header-offcanvas.css" id="ekit-header-offcanvas-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/31_header-info.css" id="ekit-header-info-css" media="all" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" id="finsta-font-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/33_css-variable.css" id="finsta-css-variable-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/34_all.min.css" id="fontawesome-6.4.0-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/35_bootstrap.min.css" id="bootstrap-5.3.2-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/36_style.css" id="finsta-style-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/38_fontawesome.min.css" id="elementor-icons-shared-0-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/40_brands.min.css" id="elementor-icons-fa-brands-css" media="all" rel="stylesheet"/>
+<script type="text/javascript">
+		var elementskit = {
+			resturl: 'https://demo.awaikenthemes.com/finsta/wp-json/elementskit/v1/',
+		}
+
+		</script><script id="jquery-core-js" src="../assets/js/1_jquery.min.js"></script>
+<script id="jquery-migrate-js" src="../assets/js/2_jquery-migrate.min.js"></script>
+<link href="https://demo.awaikenthemes.com/finsta/wp-json/" rel="https://api.w.org/"/><link href="https://demo.awaikenthemes.com/finsta/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+<meta content="Elementor 4.3.4; settings: css_print_method-external, google_font-enabled, font_display-swap" name="generator"/>
+<script type="text/javascript">var elementskit_module_parallax_url = "https://demo.awaikenthemes.com/finsta/wp-content/plugins/elementskit/modules/parallax/";</script> <style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+<link href="assets/images/favicon.png" rel="icon" sizes="32x32"/>
+<link href="assets/images/favicon.png" rel="icon" sizes="192x192"/>
+<link href="assets/images/favicon.png" rel="apple-touch-icon"/>
+<meta content="assets/images/favicon.png" name="msapplication-TileImage"/>
+<link href="../assets/css/override_fixes.css" rel="stylesheet"/></head>
+<body class="blog wp-custom-logo wp-theme-finsta tt-magic-cursor fancy-scrollbar elementor-default elementor-kit-9">
+<div class="theme-preloader">
+<div class="loading-container">
+<div class="loading"></div>
+<div id="loading-icon"><img alt="Preloader" loading="eager" src="../assets/images/0_loader.svg" srcset=""/></div>
+</div>
+</div>
+<div id="magic-cursor">
+<div id="ball"></div>
+</div>
+<a class="skip-link screen-reader-text" href="#content">
+			Skip to content		</a>
+<div class="ekit-template-content-markup ekit-template-content-header ekit-template-content-theme-support">
+<div class="elementor elementor-226" data-elementor-id="226" data-elementor-type="wp-post">
+<div class="elementor-element elementor-element-7194a45 e-con-full header-version-1 e-flex e-con e-parent" data-e-type="container" data-element_type="container" data-id="7194a45" data-settings='{"position":"absolute","background_background":"classic"}'>
+<div class="elementor-element elementor-element-a3387b8 e-flex e-con-boxed e-con e-child" data-e-type="container" data-element_type="container" data-id="a3387b8">
+<div class="e-con-inner">
+<div class="elementor-element elementor-element-258cb11 e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="258cb11">
+<div class="elementor-element elementor-element-771a14e elementor-widget elementor-widget-finsta-site-logo" data-e-type="widget" data-element_type="widget" data-id="771a14e" data-settings='{"align":"left","width":{"unit":"%","size":100,"sizes":[]},"space":{"unit":"%","size":100,"sizes":[]},"width_tablet":{"unit":"%","size":"","sizes":[]},"width_mobile":{"unit":"%","size":"","sizes":[]},"space_tablet":{"unit":"%","size":"","sizes":[]},"space_mobile":{"unit":"%","size":"","sizes":[]},"max_height":{"unit":"px","size":"","sizes":[]},"max_height_tablet":{"unit":"px","size":"","sizes":[]},"max_height_mobile":{"unit":"px","size":"","sizes":[]},"image_border_radius":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"image_border_radius_tablet":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"image_border_radius_mobile":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"caption_padding":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"caption_padding_tablet":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"caption_padding_mobile":{"unit":"px","top":"","right":"","bottom":"","left":"","isLinked":true},"caption_space":{"unit":"px","size":0,"sizes":[]},"caption_space_tablet":{"unit":"px","size":"","sizes":[]},"caption_space_mobile":{"unit":"px","size":"","sizes":[]},"ekit_we_effect_on":"none"}' data-widget_type="finsta-site-logo.default">
+<div class="elementor-widget-container">
+<div class="ata-site-logo">
+<a class="elementor-clickable" data-elementor-open-lightbox="" href="../index.html">
+<div class="ata-site-logo-set">
+<div class="ata-site-logo-container">
+<img alt="default-logo" class="ata-site-logo-img elementor-animation-" loading="eager" src="../assets/images/1_logo.svg" srcset=""/>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-c1386dd e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="c1386dd">
+<div class="elementor-element elementor-element-5493365 main-header-menu elementor-widget elementor-widget-ekit-nav-menu" data-e-type="widget" data-element_type="widget" data-id="5493365" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="ekit-nav-menu.default">
+<div class="elementor-widget-container">
+<nav aria-label="Header Menu" class="ekit-wid-con ekit_menu_responsive_tablet" data-close-on-anchor="no" data-hamburger-icon="icon icon-menu-11" data-hamburger-icon-type="icon" data-responsive-breakpoint="1024">
+<button aria-controls="ekit-megamenu-header-menu" aria-expanded="false" aria-label="Menu" class="elementskit-menu-hamburger elementskit-menu-toggler" type="button">
+<svg class="ekit-menu-icon ekit-svg-icon icon-menu-11" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M30.707 15.107h-29.415c-0.714 0-1.293 0.579-1.293 1.293s0.579 1.293 1.293 1.293h29.415c0.714 0 1.293-0.579 1.293-1.293s-0.579-1.293-1.293-1.293zM30.707 5.302h-29.415c-0.714 0-1.293 0.579-1.293 1.293s0.579 1.293 1.293 1.293h29.415c0.714 0 1.293-0.579 1.293-1.293s-0.579-1.293-1.293-1.293zM30.707 24.912h-29.415c-0.714 0-1.293 0.579-1.293 1.293s0.579 1.293 1.293 1.293h29.415c0.714 0 1.293-0.579 1.293-1.293s-0.579-1.293-1.293-1.293z"></path></svg> </button>
+<div class="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover" id="ekit-megamenu-header-menu"><ul class="elementskit-navbar-nav elementskit-menu-po-center submenu-click-on-icon" id="menu-header-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-846 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-846"><a aria-controls="ekit-submenu-846" aria-expanded="false" aria-haspopup="true" class="ekit-menu-nav-link ekit-menu-dropdown-toggle" href="#">Home<svg class="elementskit-submenu-indicator ekit-svg-icon icon-down-arrow1" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M31.582 8.495c-0.578-0.613-1.544-0.635-2.153-0.059l-13.43 12.723-13.428-12.723c-0.61-0.578-1.574-0.553-2.153 0.059-0.579 0.611-0.553 1.576 0.058 2.155l14.477 13.715c0.293 0.277 0.67 0.418 1.047 0.418s0.756-0.14 1.048-0.418l14.477-13.715c0.611-0.579 0.637-1.544 0.058-2.155z"></path></svg></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel" id="ekit-submenu-846">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-158 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-158"><a class="dropdown-item" href="../index.html">Home – Version 1</a> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10717 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-10717"><a class="dropdown-item" href="../index.html">Home – Version 2</a> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10718 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-10718"><a class="dropdown-item" href="../index.html">Home – Version 3</a></li></li></li></ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10725 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-10725"><a class="ekit-menu-nav-link" href="../About_Us.html">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10731 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-10731"><a class="ekit-menu-nav-link" href="../services.html">Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-15 current_page_item current_page_parent menu-item-159 nav-item elementskit-mobile-builder-content active" data-vertical-menu="750px" id="menu-item-159"><a class="ekit-menu-nav-link active" href="../blog.html">Blog</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-843 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-843"><a aria-controls="ekit-submenu-843" aria-expanded="false" aria-haspopup="true" class="ekit-menu-nav-link ekit-menu-dropdown-toggle" href="#">Pages<svg class="elementskit-submenu-indicator ekit-svg-icon icon-down-arrow1" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M31.582 8.495c-0.578-0.613-1.544-0.635-2.153-0.059l-13.43 12.723-13.428-12.723c-0.61-0.578-1.574-0.553-2.153 0.059-0.579 0.611-0.553 1.576 0.058 2.155l14.477 13.715c0.293 0.277 0.67 0.418 1.047 0.418s0.756-0.14 1.048-0.418l14.477-13.715c0.611-0.579 0.637-1.544 0.058-2.155z"></path></svg></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel" id="ekit-submenu-843">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10732 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-10732"><a class="dropdown-item" href="../services.html">Service Details</a> <li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-10741 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-10741"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/top-investment-strategies-for-long-term-wealth/">Blog Details</a> <li class="menu-item menu-item-type-post_type_archive menu-item-object-awaiken-project menu-item-11735 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-11735"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/projects/">Our Projects</a> <li class="menu-item menu-item-type-post_type menu-item-object-awaiken-project menu-item-13449 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-13449"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/projects/advanced-tax-planning-and-compliance/">Project Details</a> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10728 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-10728"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/our-team/">Our Team</a> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10733 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-10733"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/our-team/john-anderson/">Team Details</a> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10729 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-10729"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/pricing-plan/">Pricing Plan</a> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10734 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-10734"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/testimonials/">Testimonials</a> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10727 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-10727"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/image-gallery/">Image Gallery</a> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10735 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-10735"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/video-gallery/">Video Gallery</a> <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11088 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-11088"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/faqs/">FAQs</a> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10762 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-10762"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/404">404</a> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4029 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-4029"><a aria-controls="ekit-submenu-4029" aria-expanded="false" aria-haspopup="true" class="dropdown-item" href="#">Header Layouts<svg class="elementskit-submenu-indicator ekit-svg-icon icon-down-arrow1" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M31.582 8.495c-0.578-0.613-1.544-0.635-2.153-0.059l-13.43 12.723-13.428-12.723c-0.61-0.578-1.574-0.553-2.153 0.059-0.579 0.611-0.553 1.576 0.058 2.155l14.477 13.715c0.293 0.277 0.67 0.418 1.047 0.418s0.756-0.14 1.048-0.418l14.477-13.715c0.611-0.579 0.637-1.544 0.058-2.155z"></path></svg></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel" id="ekit-submenu-4029">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4043 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-4043"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/?elementskit_template=header" target="_blank">Header Layout – 1</a> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4050 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-4050"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/?elementskit_template=header-layout-2" target="_blank">Header Layout – 2</a> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4051 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-4051"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/?elementskit_template=header-layout-3" target="_blank">Header Layout – 3</a> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4052 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-4052"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/?elementskit_template=header-layout-4" target="_blank">Header Layout – 4</a> </li></li></li></li></ul>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3212 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-3212"><a aria-controls="ekit-submenu-3212" aria-expanded="false" aria-haspopup="true" class="dropdown-item" href="#">Footer Layouts<svg class="elementskit-submenu-indicator ekit-svg-icon icon-down-arrow1" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M31.582 8.495c-0.578-0.613-1.544-0.635-2.153-0.059l-13.43 12.723-13.428-12.723c-0.61-0.578-1.574-0.553-2.153 0.059-0.579 0.611-0.553 1.576 0.058 2.155l14.477 13.715c0.293 0.277 0.67 0.418 1.047 0.418s0.756-0.14 1.048-0.418l14.477-13.715c0.611-0.579 0.637-1.544 0.058-2.155z"></path></svg></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel" id="ekit-submenu-3212">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3222 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-3222"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/?elementskit_template=footer" target="_blank">Footer Layout – 1</a> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3223 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-3223"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/?elementskit_template=footer-home-2" target="_blank">Footer Layout – 2</a> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3231 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-3231"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/?elementskit_template=footer-home-3" target="_blank">Footer Layout – 3</a> <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3239 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-3239"><a class="dropdown-item" href="https://demo.awaikenthemes.com/finsta/?elementskit_template=footer-layout-4" target="_blank">Footer Layout – 4</a> </li></li></li></li></ul>
+</li></li></li></li></li></li></li></li></li></li></li></li></li></li></ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10726 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-10726"><a class="ekit-menu-nav-link" href="../contact-us.html">Contact Us</a></li>
+</ul><div class="elementskit-nav-identity-panel"><button class="elementskit-menu-close elementskit-menu-toggler" type="button">X</button></div></div>
+<div class="elementskit-menu-overlay elementskit-menu-offcanvas-elements elementskit-menu-toggler ekit-nav-menu--overlay"></div> </nav>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-379c4f5 e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="379c4f5">
+<div class="elementor-element elementor-element-ce75f7d btn-highlighted elementor-widget elementor-widget-elementskit-creative-button" data-e-type="widget" data-element_type="widget" data-id="ce75f7d" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-creative-button.default">
+<div class="elementor-widget-container">
+<div class="ekit-wid-con"> <div class="ekit-btn-wraper">
+<a class="ekit_creative_button ekit_position_aware" data-text="" href="../contact-us.html" id="" style="flex-direction: row-reverse;">
+<span class="ekit_creative_button_icon_wrapper">
+<svg fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M16.01 9.16687C13.9621 9.16687 12.0956 7.31603 12.0956 5.28353V4.4502H10.4156V5.28353C10.4156 6.76186 11.0691 8.14853 12.0947 9.16687H1.72998V10.8335H12.0947C11.0691 11.8519 10.4156 13.2385 10.4156 14.7169V15.5502H12.0956V14.7169C12.0956 12.6844 13.9621 10.8335 16.01 10.8335H16.85V9.16687H16.01Z" fill-rule="evenodd"></path></svg> </span>
+<span class="ekit_creative_button_text">Contact Us</span>
+<span class="ekit_position_aware_bg"></span> </a>
+</div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<main class="site-main" id="content">
+<div class="page-header" style="background-image: url('https://demo.awaikenthemes.com/finsta/wp-content/uploads/2026/05/page-header-bg-image.jpg')">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-md-12">
+<div class="page-header-box">
+<h1 class="entry-title">Our blog</h1>
+<div aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs" role="navigation"><ol class="trail-items"><li class="trail-item trail-begin"><a href="../index.html" rel="home"><span>Home</span></a></li><li class="trail-item trail-end"><span><span>Blog</span></span></li></ol></div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="page-content">
+<div class="page-blog-archive">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="row">
+<div class="col-xl-4 col-md-6">
+<div class="post-item">
+<div class="post-featured-image">
+<a href="https://demo.awaikenthemes.com/finsta/top-investment-strategies-for-long-term-wealth/"><figure class="at-blog-shiny-glass-effect"><img alt="" class="attachment-large size-large wp-post-image" decoding="async" fetchpriority="high" height="450" loading="eager" sizes="(max-width: 800px) 100vw, 800px" src="../assets/images/blog_post-1-1024x576.jpg" srcset="" width="800"/></figure></a> </div>
+<div class="post-item-body">
+<div class="post-item-content">
+<h2><a href="https://demo.awaikenthemes.com/finsta/top-investment-strategies-for-long-term-wealth/">Top Investment Strategies for Long Term Wealth</a></h2> </div>
+<div class="post-item-btn">
+<a href="https://demo.awaikenthemes.com/finsta/top-investment-strategies-for-long-term-wealth/">Read More <svg fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M16.0066 9.16589C13.9587 9.16589 12.0922 7.31505 12.0922 5.28255V4.44922H10.4122V5.28255C10.4122 6.76088 11.0657 8.14755 12.0913 9.16589H1.72656V10.8325H12.0913C11.0657 11.8509 10.4122 13.2375 10.4122 14.7159V15.5492H12.0922V14.7159C12.0922 12.6834 13.9587 10.8325 16.0066 10.8325H16.8466V9.16589H16.0066Z" fill-rule="evenodd"></path></svg></a> </div>
+</div>
+</div>
+</div>
+<div class="col-xl-4 col-md-6">
+<div class="post-item">
+<div class="post-featured-image">
+<a href="https://demo.awaikenthemes.com/finsta/building-a-strong-business-strategy-for-success/"><figure class="at-blog-shiny-glass-effect"><img alt="" class="attachment-large size-large wp-post-image" decoding="async" height="450" loading="eager" sizes="(max-width: 800px) 100vw, 800px" src="../assets/images/blog_post-2-1024x576.jpg" srcset="" width="800"/></figure></a> </div>
+<div class="post-item-body">
+<div class="post-item-content">
+<h2><a href="https://demo.awaikenthemes.com/finsta/building-a-strong-business-strategy-for-success/">Building a Strong Business Strategy for Success</a></h2> </div>
+<div class="post-item-btn">
+<a href="https://demo.awaikenthemes.com/finsta/building-a-strong-business-strategy-for-success/">Read More <svg fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M16.0066 9.16589C13.9587 9.16589 12.0922 7.31505 12.0922 5.28255V4.44922H10.4122V5.28255C10.4122 6.76088 11.0657 8.14755 12.0913 9.16589H1.72656V10.8325H12.0913C11.0657 11.8509 10.4122 13.2375 10.4122 14.7159V15.5492H12.0922V14.7159C12.0922 12.6834 13.9587 10.8325 16.0066 10.8325H16.8466V9.16589H16.0066Z" fill-rule="evenodd"></path></svg></a> </div>
+</div>
+</div>
+</div>
+<div class="col-xl-4 col-md-6">
+<div class="post-item">
+<div class="post-featured-image">
+<a href="https://demo.awaikenthemes.com/finsta/top-5-tax-planning-strategies-for-small-businesses/"><figure class="at-blog-shiny-glass-effect"><img alt="" class="attachment-large size-large wp-post-image" decoding="async" height="450" loading="eager" sizes="(max-width: 800px) 100vw, 800px" src="../assets/images/blog_post-3-1024x576.jpg" srcset="" width="800"/></figure></a> </div>
+<div class="post-item-body">
+<div class="post-item-content">
+<h2><a href="https://demo.awaikenthemes.com/finsta/top-5-tax-planning-strategies-for-small-businesses/">Top 5 Tax Planning Strategies for Small Businesses</a></h2> </div>
+<div class="post-item-btn">
+<a href="https://demo.awaikenthemes.com/finsta/top-5-tax-planning-strategies-for-small-businesses/">Read More <svg fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M16.0066 9.16589C13.9587 9.16589 12.0922 7.31505 12.0922 5.28255V4.44922H10.4122V5.28255C10.4122 6.76088 11.0657 8.14755 12.0913 9.16589H1.72656V10.8325H12.0913C11.0657 11.8509 10.4122 13.2375 10.4122 14.7159V15.5492H12.0922V14.7159C12.0922 12.6834 13.9587 10.8325 16.0066 10.8325H16.8466V9.16589H16.0066Z" fill-rule="evenodd"></path></svg></a> </div>
+</div>
+</div>
+</div>
+<div class="col-xl-4 col-md-6">
+<div class="post-item">
+<div class="post-featured-image">
+<a href="https://demo.awaikenthemes.com/finsta/how-to-optimize-cash-flow-for-business-stability/"><figure class="at-blog-shiny-glass-effect"><img alt="" class="attachment-large size-large wp-post-image" decoding="async" height="450" loading="eager" sizes="(max-width: 800px) 100vw, 800px" src="../assets/images/blog_post-4-1024x576.jpg" srcset="" width="800"/></figure></a> </div>
+<div class="post-item-body">
+<div class="post-item-content">
+<h2><a href="https://demo.awaikenthemes.com/finsta/how-to-optimize-cash-flow-for-business-stability/">How to Optimize Cash Flow for Business Stability</a></h2> </div>
+<div class="post-item-btn">
+<a href="https://demo.awaikenthemes.com/finsta/how-to-optimize-cash-flow-for-business-stability/">Read More <svg fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M16.0066 9.16589C13.9587 9.16589 12.0922 7.31505 12.0922 5.28255V4.44922H10.4122V5.28255C10.4122 6.76088 11.0657 8.14755 12.0913 9.16589H1.72656V10.8325H12.0913C11.0657 11.8509 10.4122 13.2375 10.4122 14.7159V15.5492H12.0922V14.7159C12.0922 12.6834 13.9587 10.8325 16.0066 10.8325H16.8466V9.16589H16.0066Z" fill-rule="evenodd"></path></svg></a> </div>
+</div>
+</div>
+</div>
+<div class="col-xl-4 col-md-6">
+<div class="post-item">
+<div class="post-featured-image">
+<a href="https://demo.awaikenthemes.com/finsta/investment-strategy-to-maximize-returns-in-2026/"><figure class="at-blog-shiny-glass-effect"><img alt="" class="attachment-large size-large wp-post-image" decoding="async" height="450" loading="eager" sizes="(max-width: 800px) 100vw, 800px" src="../assets/images/blog_post-5-1024x576.jpg" srcset="" width="800"/></figure></a> </div>
+<div class="post-item-body">
+<div class="post-item-content">
+<h2><a href="https://demo.awaikenthemes.com/finsta/investment-strategy-to-maximize-returns-in-2026/">Investment Strategy to Maximize Returns in 2026</a></h2> </div>
+<div class="post-item-btn">
+<a href="https://demo.awaikenthemes.com/finsta/investment-strategy-to-maximize-returns-in-2026/">Read More <svg fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M16.0066 9.16589C13.9587 9.16589 12.0922 7.31505 12.0922 5.28255V4.44922H10.4122V5.28255C10.4122 6.76088 11.0657 8.14755 12.0913 9.16589H1.72656V10.8325H12.0913C11.0657 11.8509 10.4122 13.2375 10.4122 14.7159V15.5492H12.0922V14.7159C12.0922 12.6834 13.9587 10.8325 16.0066 10.8325H16.8466V9.16589H16.0066Z" fill-rule="evenodd"></path></svg></a> </div>
+</div>
+</div>
+</div>
+<div class="col-xl-4 col-md-6">
+<div class="post-item">
+<div class="post-featured-image">
+<a href="https://demo.awaikenthemes.com/finsta/effective-tax-planning-tips-for-businesses-and-individuals/"><figure class="at-blog-shiny-glass-effect"><img alt="" class="attachment-large size-large wp-post-image" decoding="async" height="450" loading="eager" sizes="(max-width: 800px) 100vw, 800px" src="../assets/images/blog_post-6-1024x576.jpg" srcset="" width="800"/></figure></a> </div>
+<div class="post-item-body">
+<div class="post-item-content">
+<h2><a href="https://demo.awaikenthemes.com/finsta/effective-tax-planning-tips-for-businesses-and-individuals/">Effective Tax Planning Tips for Businesses and Individuals</a></h2> </div>
+<div class="post-item-btn">
+<a href="https://demo.awaikenthemes.com/finsta/effective-tax-planning-tips-for-businesses-and-individuals/">Read More <svg fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M16.0066 9.16589C13.9587 9.16589 12.0922 7.31505 12.0922 5.28255V4.44922H10.4122V5.28255C10.4122 6.76088 11.0657 8.14755 12.0913 9.16589H1.72656V10.8325H12.0913C11.0657 11.8509 10.4122 13.2375 10.4122 14.7159V15.5492H12.0922V14.7159C12.0922 12.6834 13.9587 10.8325 16.0066 10.8325H16.8466V9.16589H16.0066Z" fill-rule="evenodd"></path></svg></a> </div>
+</div>
+</div>
+</div>
+<div class="col-md-12">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main><div class="ekit-template-content-markup ekit-template-content-footer ekit-template-content-theme-support">
+<div class="elementor elementor-227" data-elementor-id="227" data-elementor-type="wp-post">
+<div class="elementor-element elementor-element-718fdda e-flex e-con-boxed e-con e-parent" data-e-type="container" data-element_type="container" data-id="718fdda">
+<div class="e-con-inner">
+<div class="elementor-element elementor-element-ba1daad e-flex e-con-boxed e-con e-child" data-e-type="container" data-element_type="container" data-id="ba1daad" data-settings='{"background_background":"classic"}'>
+<div class="e-con-inner">
+<div class="elementor-element elementor-element-a695c4d e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="a695c4d">
+<div class="elementor-element elementor-element-35d0873 e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="35d0873">
+<div class="elementor-element elementor-element-c965c67 at-image-animation at-animation-image-none elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="c965c67" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="image.default">
+<img alt="" class="attachment-full size-full wp-image-64" height="50" loading="eager" src="../assets/images/1_logo.svg" srcset="" width="149"/> </div>
+<div class="elementor-element elementor-element-9240eab elementor-widget elementor-widget-text-editor" data-e-type="widget" data-element_type="widget" data-id="9240eab" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="text-editor.default">
+<p>We are a trusted finance and consulting firm dedicated to helping businesses &amp; individuals make smarter financial decisions.</p> </div>
+<div class="elementor-element elementor-element-ab50c0d elementor-widget elementor-widget-elementskit-social-media" data-e-type="widget" data-element_type="widget" data-id="ab50c0d" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-social-media.default">
+<div class="elementor-widget-container">
+<div class="ekit-wid-con"> <ul class="ekit_social_media">
+<li class="elementor-repeater-item-a4c5a5a">
+<a aria-label="Facebook" class="facebook" href="#">
+<svg class="ekit-svg-icon icon-facebook" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M23.999 0.407l-4.15-0.007c-4.662 0-7.675 3.091-7.675 7.875v3.631h-4.172c-0.361 0-0.652 0.292-0.652 0.653v5.261c0 0.361 0.292 0.652 0.652 0.652h4.172v13.275c0 0.361 0.292 0.653 0.652 0.653h5.444c0.361 0 0.652-0.292 0.652-0.652v-13.275h4.878c0.361 0 0.652-0.292 0.652-0.652l0.002-5.261c0-0.173-0.069-0.339-0.191-0.461s-0.289-0.191-0.462-0.191h-4.88v-3.078c0-1.479 0.353-2.23 2.28-2.23l2.795-0.001c0.36 0 0.652-0.292 0.652-0.652v-4.885c0-0.36-0.292-0.652-0.651-0.652z"></path></svg>
+</a>
+</li>
+<li class="elementor-repeater-item-a2a862d">
+<a aria-label="dribbble" class="dribbble" href="#">
+<i aria-hidden="true" class="fab fa-dribbble"></i>
+</a>
+</li>
+<li class="elementor-repeater-item-180987b">
+<a aria-label="instagram" class="instagram" href="#">
+<i aria-hidden="true" class="fab fa-instagram"></i>
+</a>
+</li>
+<li class="elementor-repeater-item-a924977">
+<a aria-label="linkedin" class="in" href="#">
+<i aria-hidden="true" class="fab fa-linkedin-in"></i>
+</a>
+</li>
+</ul>
+</div> </div>
+</div>
+</div>
+<div class="elementor-element elementor-element-6b01747 e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="6b01747">
+<div class="elementor-element elementor-element-7f5393c at-heading-animation at-animation-heading-none elementor-widget elementor-widget-heading" data-e-type="widget" data-element_type="widget" data-id="7f5393c" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="heading.default">
+<h3 class="elementor-heading-title elementor-size-default">Quick Links</h3> </div>
+<div class="elementor-element elementor-element-4ebbf0f footer-links elementor-widget elementor-widget-ekit-vertical-menu" data-e-type="widget" data-element_type="widget" data-id="4ebbf0f" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="ekit-vertical-menu.default">
+<div class="ekit-wid-con"> <div class="ekit-vertical-main-menu-wraper badge-position-left">
+<div class="ekit-vertical-menu-container" id="ekit-vertical-menu-container-4ebbf0f"><ul class="ekit-vertical-navbar-nav submenu-click-on-" id="menu-footer-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-166 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-166"><a class="ekit-menu-nav-link" href="../index.html">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11101 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-11101"><a class="ekit-menu-nav-link" href="../About_Us.html">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11103 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-11103"><a class="ekit-menu-nav-link" href="../services.html">Our Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-15 current_page_item current_page_parent menu-item-167 nav-item elementskit-mobile-builder-content active" data-vertical-menu="750px" id="menu-item-167"><a class="ekit-menu-nav-link active" href="../blog.html">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11102 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-11102"><a class="ekit-menu-nav-link" href="../contact-us.html">Contact Us</a></li>
+</ul></div> </div>
+</div> </div>
+</div>
+<div class="elementor-element elementor-element-63a1836 e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="63a1836">
+<div class="elementor-element elementor-element-1f9b8f5 at-heading-animation at-animation-heading-none elementor-widget elementor-widget-heading" data-e-type="widget" data-element_type="widget" data-id="1f9b8f5" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="heading.default">
+<h3 class="elementor-heading-title elementor-size-default">Our Services</h3> </div>
+<div class="elementor-element elementor-element-aae5e85 footer-links elementor-widget elementor-widget-ekit-vertical-menu" data-e-type="widget" data-element_type="widget" data-id="aae5e85" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="ekit-vertical-menu.default">
+<div class="ekit-wid-con"> <div class="ekit-vertical-main-menu-wraper badge-position-left">
+<div class="ekit-vertical-menu-container" id="ekit-vertical-menu-container-aae5e85"><ul class="ekit-vertical-navbar-nav submenu-click-on-" id="menu-service-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12654 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-12654"><a class="ekit-menu-nav-link" href="../services.html">Financial Planning</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12655 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-12655"><a class="ekit-menu-nav-link" href="../services.html">Investment Advisory</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12656 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-12656"><a class="ekit-menu-nav-link" href="../services.html">Risk Management</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12657 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-12657"><a class="ekit-menu-nav-link" href="../services.html">Tax Planning</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12658 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px" id="menu-item-12658"><a class="ekit-menu-nav-link" href="../services.html">Wealth Management</a></li>
+</ul></div> </div>
+</div> </div>
+</div>
+<div class="elementor-element elementor-element-6dc1d5f e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="6dc1d5f">
+<div class="elementor-element elementor-element-8aea3c8 at-heading-animation at-animation-heading-none elementor-widget elementor-widget-heading" data-e-type="widget" data-element_type="widget" data-id="8aea3c8" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="heading.default">
+<h3 class="elementor-heading-title elementor-size-default">Working Hours</h3> </div>
+<div class="elementor-element elementor-element-8790866 footer-working-hour-box elementor-widget-tablet__width-initial elementor-widget elementor-widget-elementskit-business-hours" data-e-type="widget" data-element_type="widget" data-id="8790866" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-business-hours.default">
+<div class="ekit-wid-con"> <div class="ekit-business-hours-inner">
+<div class="ekit-single-day elementor-repeater-item-ad25a0b">
+<span class="ekit-business-day">Monday - Friday:</span>
+<span class="ekit-business-time">09:00 AM - 05:00 PM</span>
+</div>
+<div class="ekit-single-day elementor-repeater-item-025c69d">
+<span class="ekit-business-day">Saturday:</span>
+<span class="ekit-business-time">09:00 AM - 05:00 PM</span>
+</div>
+<div class="ekit-single-day elementor-repeater-item-40df841">
+<span class="ekit-business-day">Sunday:</span>
+<span class="ekit-business-time">Closed</span>
+</div>
+</div>
+</div> </div>
+</div>
+</div>
+<div class="elementor-element elementor-element-18bcf48 e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="18bcf48">
+<div class="elementor-element elementor-element-2eabe2d e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="2eabe2d">
+<div class="elementor-element elementor-element-9486971 at-heading-animation at-animation-heading-none elementor-widget elementor-widget-heading" data-e-type="widget" data-element_type="widget" data-id="9486971" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="heading.default">
+<h3 class="elementor-heading-title elementor-size-default">Subscribe Our Newsletter</h3> </div>
+<div class="elementor-element elementor-element-280a988 footer-form backdrop-filter-1 elementor-widget-tablet__width-inherit elementor-widget elementor-widget-elementskit-contact-form7" data-e-type="widget" data-element_type="widget" data-id="280a988" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-contact-form7.default">
+<div class="ekit-wid-con"><div class="ekit-form">
+<div class="wpcf7 no-js" data-wpcf7-id="1362" dir="ltr" id="wpcf7-f1362-o1" lang="en-US">
+<div class="screen-reader-response"><p aria-atomic="true" aria-live="polite" role="status"></p> <ul></ul></div>
+<form action="/finsta/blog/#wpcf7-f1362-o1" aria-label="Contact form" class="wpcf7-form init" data-status="init" method="post" novalidate="novalidate">
+<fieldset class="hidden-fields-container"><input name="_wpcf7" type="hidden" value="1362"/><input name="_wpcf7_version" type="hidden" value="6.2"/><input name="_wpcf7_locale" type="hidden" value="en_US"/><input name="_wpcf7_unit_tag" type="hidden" value="wpcf7-f1362-o1"/><input name="_wpcf7_container_post" type="hidden" value="0"/><input name="_wpcf7_posted_data_hash" type="hidden" value=""/>
+</fieldset>
+<div class="form-group">
+<div class="email-field">
+<p><span class="wpcf7-form-control-wrap" data-name="email"><input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email form-control" id="email" maxlength="400" name="email" placeholder="Enter Your E-mail" size="40" type="email" value=""/></span>
+</p>
+</div>
+<div class="newsletter-btn">
+<p><input class="wpcf7-form-control wpcf7-submit has-spinner" id="msgSubmit" type="submit" value="Subscribe"/>
+</p>
+</div>
+</div><div aria-hidden="true" class="wpcf7-response-output"></div>
+</form>
+</div>
+</div></div> </div>
+</div>
+<div class="elementor-element elementor-element-d401b9d e-con-full backdrop-filter-1 e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="d401b9d" data-settings='{"background_background":"classic"}'>
+<div class="elementor-element elementor-element-f274d74 footer-contact-item ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-e-type="widget" data-element_type="widget" data-id="f274d74" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-icon-box.default">
+<div class="ekit-wid-con"> <!-- link opening -->
+<a class="ekit_global_links" href="mailto:info@domainname.com">
+<!-- end link opening -->
+<div class="elementskit-infobox text-left text-left icon-lef-right-aligin elementor-animation- media">
+<div class="elementskit-box-header elementor-animation-">
+<div class="elementskit-info-box-icon text-center">
+<svg fill="currentColor" height="20" viewbox="0 0 24 20" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M22.2861 2.46387C22.2859 1.93147 21.8536 1.5 21.3213 1.5H2.46387C1.93164 1.50023 1.50023 1.93163 1.5 2.46387V17.0361C1.50023 17.5684 1.93164 17.9998 2.46387 18H21.3213C21.8536 18 22.2859 17.5685 22.2861 17.0361V2.46387ZM23.7861 17.0361C23.7859 18.3969 22.6821 19.5 21.3213 19.5H2.46387C1.10321 19.4998 0.000233934 18.3968 0 17.0361V2.46387C0.000228528 1.10321 1.10321 0.000227433 2.46387 0H21.3213C22.6821 0 23.7859 1.1031 23.7861 2.46387V17.0361Z"></path><path d="M22.5484 2.31999C22.8635 2.05113 23.3372 2.08888 23.606 2.40398C23.8745 2.71905 23.8369 3.19186 23.5221 3.46062L13.4762 12.0319L13.4693 12.0378C13.0265 12.4066 12.4684 12.6091 11.8922 12.6091C11.316 12.609 10.7578 12.4065 10.315 12.0378L10.3082 12.0319L0.263269 3.46062C-0.0517759 3.19181 -0.0894176 2.71908 0.179285 2.40398C0.448095 2.08893 0.920824 2.05129 1.23593 2.31999L11.275 10.8854L11.4127 10.9811C11.5578 11.0644 11.723 11.109 11.8922 11.1091C12.1177 11.1091 12.3362 11.0297 12.5094 10.8854L22.5484 2.31999Z"></path></svg>
+</div>
+</div>
+<div class="box-body">
+<h3 class="elementskit-info-box-title">
+                    Email Address                </h3>
+<p>info@domainname.com</p>
+</div>
+</div>
+</a>
+</div> </div>
+<div class="elementor-element elementor-element-779ecd4 footer-contact-item ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-e-type="widget" data-element_type="widget" data-id="779ecd4" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-icon-box.default">
+<div class="ekit-wid-con"> <!-- link opening -->
+<!-- end link opening -->
+<div class="elementskit-infobox text-left text-left icon-lef-right-aligin elementor-animation- media">
+<div class="elementskit-box-header elementor-animation-">
+<div class="elementskit-info-box-icon text-center">
+<svg fill="currentColor" height="24" viewbox="0 0 22 24" width="22" xmlns="http://www.w3.org/2000/svg"><path d="M14.5536 15.8572C17.1074 11.8496 16.7864 12.3496 16.86 12.2452C17.7899 10.9336 18.2813 9.3901 18.2813 7.78126C18.2813 3.51469 14.819 0 10.5469 0C6.28865 0 2.8125 3.50776 2.8125 7.78126C2.8125 9.38906 3.31425 10.973 4.27454 12.3022L6.5401 15.8572C4.11783 16.2294 0 17.3387 0 19.7813C0 20.6717 0.58115 21.9406 3.34978 22.9294C5.28301 23.6197 7.83896 24 10.5469 24C15.6105 24 21.0938 22.5716 21.0938 19.7813C21.0938 17.3383 16.9808 16.2301 14.5536 15.8572ZM5.44917 11.5287C5.44144 11.5166 5.43338 11.5048 5.42494 11.4931C4.62586 10.3938 4.21875 9.09098 4.21875 7.78126C4.21875 4.26478 7.05028 1.40626 10.5469 1.40626C14.0363 1.40626 16.875 4.26605 16.875 7.78126C16.875 9.0931 16.4756 10.3517 15.7197 11.4221C15.6521 11.5114 16.0053 10.9624 10.5469 19.5276L5.44917 11.5287ZM10.5469 22.5937C5.01591 22.5937 1.40625 20.968 1.40625 19.7813C1.40625 18.9836 3.26101 17.6722 7.37101 17.1608L9.95388 21.2138C10.083 21.4164 10.3066 21.539 10.5468 21.539C10.7871 21.539 11.0107 21.4164 11.1398 21.2138L13.7226 17.1608C17.8327 17.6722 19.6875 18.9836 19.6875 19.7813C19.6875 20.9579 16.1103 22.5937 10.5469 22.5937Z"></path><path d="M10.5469 4.26562C8.60837 4.26562 7.03125 5.84274 7.03125 7.78125C7.03125 9.71976 8.60837 11.2969 10.5469 11.2969C12.4854 11.2969 14.0625 9.71976 14.0625 7.78125C14.0625 5.84274 12.4854 4.26562 10.5469 4.26562ZM10.5469 9.89063C9.38377 9.89063 8.4375 8.94435 8.4375 7.78125C8.4375 6.61814 9.38377 5.67188 10.5469 5.67188C11.7101 5.67188 12.6563 6.61814 12.6563 7.78125C12.6563 8.94435 11.7101 9.89063 10.5469 9.89063Z"></path></svg>
+</div>
+</div>
+<div class="box-body">
+<h3 class="elementskit-info-box-title">
+                    Our Address                </h3>
+<p>6391 Elgin Celina, Delaware 102</p>
+</div>
+</div>
+</div> </div>
+</div>
+</div>
+<div class="elementor-element elementor-element-1b10473 e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="1b10473">
+<div class="elementor-element elementor-element-93c3fb0 elementor-widget elementor-widget-elementskit-copyright" data-e-type="widget" data-element_type="widget" data-id="93c3fb0" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-copyright.default">
+<div class="elementor-widget-container">
+<div class="ekit-wid-con"> <p class="ekit-copyright-wrapper">
+                            Copyright © 2026 <a href="../index.html">Finsta</a>. All Rights Reserved.                    </p>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/finsta/*"},{"not":{"href_matches":["/finsta/wp-*.php","/finsta/wp-admin/*","/finsta/wp-content/uploads/*","/finsta/wp-content/*","/finsta/wp-content/plugins/*","/finsta/wp-content/themes/finsta/*","/finsta/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script>
+				( () => {
+					const lazyloadRunObserver = () => {
+						const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+						const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+							entries.forEach( ( entry ) => {
+								if ( entry.isIntersecting ) {
+									let lazyloadBackground = entry.target;
+									if( lazyloadBackground ) {
+										lazyloadBackground.classList.add( 'e-lazyloaded' );
+									}
+									lazyloadBackgroundObserver.unobserve( entry.target );
+								}
+							});
+						}, { rootMargin: '200px 0px 200px 0px' } );
+						lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+							lazyloadBackgroundObserver.observe( lazyloadBackground );
+						} );
+					};
+					const events = [
+						'DOMContentLoaded',
+						'elementor/lazyload/observe',
+					];
+					events.forEach( ( event ) => {
+						document.addEventListener( event, lazyloadRunObserver );
+					} );
+				} )();
+			</script>
+<link href="../assets/css/26_elementor-icons.min.css" id="elementor-icons-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/27_post-9.css" id="elementor-post-9-css" media="all" rel="stylesheet"/>
+<link href="../assets/css/0_styles.css" id="elementor-gf-dmsans-css" media="all" rel="stylesheet"/>
+<script id="wp-hooks-js" src="../assets/js/9_hooks.min.js"></script>
+<script id="wp-i18n-js" src="../assets/js/10_i18n.min.js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="swv-js" src="../assets/js/11_index.js"></script>
+<script id="contact-form-7-js-before">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/demo.awaikenthemes.com\/finsta\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+//# sourceURL=contact-form-7-js-before
+</script>
+<script id="contact-form-7-js" src="../assets/js/11_index.js"></script>
+<script id="SmoothScroll-theme-js" src="../assets/js/13_SmoothScroll.min.js"></script>
+<script id="gsap-theme-js" src="../assets/js/14_gsap.min.js"></script>
+<script id="magiccursor-theme-js" src="../assets/js/15_magiccursor.js"></script>
+<script id="SplitText-theme-js" src="../assets/js/16_SplitText.js"></script>
+<script id="ScrollTrigger-theme-js" src="../assets/js/17_ScrollTrigger.min.js"></script>
+<script id="three-theme-js" src="../assets/js/18_three.min.js"></script>
+<script id="theme-js-js-extra">
+var theme_vars = {"theme_uri":"https://demo.awaikenthemes.com/finsta/wp-content/themes/finsta"};
+//# sourceURL=theme-js-js-extra
+</script>
+<script id="theme-js-js" src="../assets/js/19_function.js"></script>
+<script id="ekit-menu-js" src="../assets/js/39_nav-menu.js"></script>
+<script id="elementor-webpack-runtime-js" src="../assets/js/20_webpack.runtime.min.js"></script>
+<script id="elementor-frontend-modules-js" src="../assets/js/21_frontend-modules.min.js"></script>
+<script id="jquery-ui-core-js-before">
+jQuery.uiBackCompat = true;
+//# sourceURL=jquery-ui-core-js-before
+</script>
+<script id="jquery-ui-core-js" src="../assets/js/22_core.min.js"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnX":"Share on X","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"4.3.4","is_static":false,"experimentalFeatures":{"container":true,"e_optimized_markup":true,"nested-elements":true,"import-export-customization":true},"urls":{"assets":"https:\/\/demo.awaikenthemes.com\/finsta\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/demo.awaikenthemes.com\/finsta\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/demo.awaikenthemes.com\/finsta\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"165cdd19ff","atomicFormsSendForm":"55d215b1bf"},"swiperClass":"swiper","settings":{"editorPreferences":[]},"kit":{"body_background_background":"classic","active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":0,"title":"Blog &#8211; Finsta","excerpt":""}};
+//# sourceURL=elementor-frontend-js-before
+</script>
+<script id="elementor-frontend-js" src="../assets/js/23_frontend.min.js"></script>
+<script id="ekit-core-js-extra">
+var ekit_config = {"ajaxurl":"https://demo.awaikenthemes.com/finsta/wp-admin/admin-ajax.php","nonce":"d0bbf764ae","i18n":{"video_frame":"Video player","close":"Close","slider_prev":"Previous slide","slider_next":"Next slide","slider_first":"This is the first slide","slider_last":"This is the last slide","slider_bullet":"Go to slide {{index}}"},"errorMessage":"Something went wrong. Please try again.","widgets":{"eventCalendar":{"headerIcons":{"prev":"","next":"","year":"\u003Csvg width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"\u003E\n                        \u003Cpath d=\"M12.375 0.75C12.7892 0.75 13.125 1.08579 13.125 1.5V2.25H14.25C15.4927 2.25 16.5 3.25737 16.5 4.5V15C16.5 16.2427 15.4927 17.25 14.25 17.25H3.75C2.50737 17.25 1.5 16.2427 1.5 15V4.5C1.5 3.25736 2.50736 2.25 3.75 2.25H4.875V1.5C4.875 1.08579 5.21079 0.75 5.625 0.75C6.03921 0.75 6.375 1.08579 6.375 1.5V2.25H11.625V1.5C11.625 1.08579 11.9608 0.75 12.375 0.75ZM3 15C3 15.4142 3.33578 15.75 3.75 15.75H14.25C14.6642 15.75 15 15.4142 15 15V8.25H3V15ZM5.625 12.5625C6.14271 12.5625 6.5625 12.9822 6.5625 13.5C6.5625 14.0178 6.14271 14.4375 5.625 14.4375C5.10729 14.4375 4.6875 14.0178 4.6875 13.5C4.6875 12.9822 5.10729 12.5625 5.625 12.5625ZM9.09668 12.5674C9.56933 12.6155 9.93848 13.0146 9.93848 13.5C9.93848 14.0177 9.51859 14.4373 9.00098 14.4375C8.51575 14.4375 8.11633 14.0687 8.06836 13.5957L8.06348 13.5L8.06836 13.4043C8.11633 12.9313 8.51575 12.5625 9.00098 12.5625L9.09668 12.5674ZM12.375 12.5566C12.8928 12.5566 13.3124 12.9764 13.3125 13.4941C13.3125 14.0119 12.8928 14.4316 12.375 14.4316C11.8575 14.4316 11.4375 14.0121 11.4375 13.4941C11.4376 12.9762 11.8575 12.5566 12.375 12.5566ZM5.625 9.5625C6.14271 9.5625 6.5625 9.98215 6.5625 10.5C6.5625 11.0178 6.14271 11.4375 5.625 11.4375C5.10729 11.4375 4.6875 11.0178 4.6875 10.5C4.6875 9.98215 5.10729 9.5625 5.625 9.5625ZM9.09668 9.56738C9.56933 9.61549 9.93848 10.0146 9.93848 10.5C9.93848 11.0177 9.51859 11.4373 9.00098 11.4375C8.51575 11.4375 8.11633 11.0687 8.06836 10.5957L8.06348 10.5L8.06836 10.4043C8.11633 9.93133 8.51575 9.5625 9.00098 9.5625L9.09668 9.56738ZM12.375 9.5625C12.8928 9.5625 13.3125 9.98221 13.3125 10.5C13.3125 11.0178 12.8928 11.4375 12.375 11.4375C11.8572 11.4375 11.4375 11.0178 11.4375 10.5C11.4375 9.98221 11.8572 9.5625 12.375 9.5625ZM3.75 3.75C3.33579 3.75 3 4.08579 3 4.5V6.75H15V4.5C15 4.08578 14.6642 3.75 14.25 3.75H13.125V4.5C13.125 4.91421 12.7892 5.25 12.375 5.25C11.9608 5.25 11.625 4.91421 11.625 4.5V3.75H6.375V4.5C6.375 4.91421 6.03921 5.25 5.625 5.25C5.21079 5.25 4.875 4.91421 4.875 4.5V3.75H3.75Z\"/\u003E\n                    \u003C/svg\u003E","month":"\u003Csvg width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"\u003E\n                        \u003Cpath d=\"M12.375 0.75C12.7892 0.75 13.125 1.08579 13.125 1.5V2.25H14.25C15.4927 2.25 16.5 3.25737 16.5 4.5V15C16.5 16.2427 15.4927 17.25 14.25 17.25H3.75C2.50737 17.25 1.5 16.2427 1.5 15V4.5C1.5 3.25736 2.50736 2.25 3.75 2.25H4.875V1.5C4.875 1.08579 5.21079 0.75 5.625 0.75C6.03921 0.75 6.375 1.08579 6.375 1.5V2.25H11.625V1.5C11.625 1.08579 11.9608 0.75 12.375 0.75ZM3 15C3 15.4142 3.33578 15.75 3.75 15.75H14.25C14.6642 15.75 15 15.4142 15 15V8.25H3V15ZM5.625 12.5625C6.14271 12.5625 6.5625 12.9822 6.5625 13.5C6.5625 14.0178 6.14271 14.4375 5.625 14.4375C5.10729 14.4375 4.6875 14.0178 4.6875 13.5C4.6875 12.9822 5.10729 12.5625 5.625 12.5625ZM9.09668 12.5674C9.56933 12.6155 9.93848 13.0146 9.93848 13.5C9.93848 14.0177 9.51859 14.4373 9.00098 14.4375C8.51575 14.4375 8.11633 14.0687 8.06836 13.5957L8.06348 13.5L8.06836 13.4043C8.11633 12.9313 8.51575 12.5625 9.00098 12.5625L9.09668 12.5674ZM5.625 9.5625C6.14271 9.5625 6.5625 9.98215 6.5625 10.5C6.5625 11.0178 6.14271 11.4375 5.625 11.4375C5.10729 11.4375 4.6875 11.0178 4.6875 10.5C4.6875 9.98215 5.10729 9.5625 5.625 9.5625ZM9.09668 9.56738C9.56933 9.61549 9.93848 10.0146 9.93848 10.5C9.93848 11.0177 9.51859 11.4373 9.00098 11.4375C8.51575 11.4375 8.11633 11.0687 8.06836 10.5957L8.06348 10.5L8.06836 10.4043C8.11633 9.93133 8.51575 9.5625 9.00098 9.5625L9.09668 9.56738ZM12.375 9.5625C12.8928 9.5625 13.3125 9.98221 13.3125 10.5C13.3125 11.0178 12.8928 11.4375 12.375 11.4375C11.8572 11.4375 11.4375 11.0178 11.4375 10.5C11.4375 9.98221 11.8572 9.5625 12.375 9.5625ZM3.75 3.75C3.33579 3.75 3 4.08579 3 4.5V6.75H15V4.5C15 4.08578 14.6642 3.75 14.25 3.75H13.125V4.5C13.125 4.91421 12.7892 5.25 12.375 5.25C11.9608 5.25 11.625 4.91421 11.625 4.5V3.75H6.375V4.5C6.375 4.91421 6.03921 5.25 5.625 5.25C5.21079 5.25 4.875 4.91421 4.875 4.5V3.75H3.75Z\"/\u003E\n                    \u003C/svg\u003E","week":"\u003Csvg width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"\u003E\n                        \u003Cpath d=\"M12.375 0.75C12.7892 0.75 13.125 1.08579 13.125 1.5V2.25H14.25C15.4927 2.25 16.5 3.25737 16.5 4.5V15C16.5 16.2427 15.4927 17.25 14.25 17.25H3.75C2.50737 17.25 1.5 16.2427 1.5 15V4.5C1.5 3.25736 2.50736 2.25 3.75 2.25H4.875V1.5C4.875 1.08579 5.21079 0.75 5.625 0.75C6.03921 0.75 6.375 1.08579 6.375 1.5V2.25H11.625V1.5C11.625 1.08579 11.9608 0.75 12.375 0.75ZM3 8.25V15C3 15.4142 3.33578 15.75 3.75 15.75H14.25C14.6642 15.75 15 15.4142 15 15V8.25H3ZM9.75 12.75C10.1642 12.75 10.5 13.0858 10.5 13.5C10.5 13.9142 10.1642 14.25 9.75 14.25H6C5.58579 14.25 5.25 13.9142 5.25 13.5C5.25 13.0858 5.58579 12.75 6 12.75H9.75ZM12 12.75C12.4142 12.75 12.75 13.0858 12.75 13.5C12.75 13.9142 12.4142 14.25 12 14.25H11.9932C11.579 14.25 11.2432 13.9142 11.2432 13.5C11.2432 13.0858 11.579 12.75 11.9932 12.75H12ZM6.00684 9.75C6.421 9.75005 6.75684 10.0858 6.75684 10.5C6.75684 10.9142 6.421 11.2499 6.00684 11.25H6C5.58579 11.25 5.25 10.9142 5.25 10.5C5.25 10.0858 5.58579 9.75 6 9.75H6.00684ZM12 9.75C12.4142 9.75 12.75 10.0858 12.75 10.5C12.75 10.9142 12.4142 11.25 12 11.25H8.25C7.83579 11.25 7.5 10.9142 7.5 10.5C7.5 10.0858 7.83579 9.75 8.25 9.75H12ZM3.75 3.75C3.33579 3.75 3 4.08579 3 4.5V6.75H15V4.5C15 4.08578 14.6642 3.75 14.25 3.75H13.125V4.5C13.125 4.91421 12.7892 5.25 12.375 5.25C11.9608 5.25 11.625 4.91421 11.625 4.5V3.75H6.375V4.5C6.375 4.91421 6.03921 5.25 5.625 5.25C5.21079 5.25 4.875 4.91421 4.875 4.5V3.75H3.75Z\"/\u003E\n                    \u003C/svg\u003E","day":"\u003Csvg width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"\u003E\n                        \u003Cpath d=\"M12.375 0.75C12.7892 0.75 13.125 1.08579 13.125 1.5V2.25H14.25C15.4927 2.25 16.5 3.25737 16.5 4.5V15C16.5 16.2427 15.4927 17.25 14.25 17.25H3.75C2.50737 17.25 1.5 16.2427 1.5 15V4.5C1.5 3.25736 2.50736 2.25 3.75 2.25H4.875V1.5C4.875 1.08579 5.21079 0.75 5.625 0.75C6.03921 0.75 6.375 1.08579 6.375 1.5V2.25H11.625V1.5C11.625 1.08579 11.9608 0.75 12.375 0.75ZM3 8.25V15C3 15.4142 3.33578 15.75 3.75 15.75H14.25C14.6642 15.75 15 15.4142 15 15V8.25H3ZM7.5 9.375C7.91416 9.375 8.24992 9.71086 8.25 10.125V13.875C8.25 14.2892 7.91421 14.625 7.5 14.625C7.08579 14.625 6.75 14.2892 6.75 13.875V10.875C6.33579 10.875 6 10.5392 6 10.125C6.00008 9.71086 6.33584 9.375 6.75 9.375H7.5ZM11.625 9.375C11.8621 9.375 12.085 9.48751 12.2266 9.67773C12.368 9.86793 12.4119 10.1138 12.3438 10.3408L11.2188 14.0889C11.0997 14.4856 10.6809 14.7109 10.2842 14.5918C9.88769 14.4726 9.66233 14.0548 9.78125 13.6582L10.6162 10.875H9.75C9.33579 10.875 9 10.5392 9 10.125C9 9.71079 9.33579 9.375 9.75 9.375H11.625ZM3.75 3.75C3.33579 3.75 3 4.08579 3 4.5V6.75H15V4.5C15 4.08578 14.6642 3.75 14.25 3.75H13.125V4.5C13.125 4.91421 12.7892 5.25 12.375 5.25C11.9608 5.25 11.625 4.91421 11.625 4.5V3.75H6.375V4.5C6.375 4.91421 6.03921 5.25 5.625 5.25C5.21079 5.25 4.875 4.91421 4.875 4.5V3.75H3.75Z\"/\u003E\n                    \u003C/svg\u003E","list":"\u003Csvg width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"\u003E\n                         \u003Cpath d=\"M4.5 10.6875C4.81066 10.6875 5.0625 10.9393 5.0625 11.25V13.5C5.0625 13.8107 4.81066 14.0625 4.5 14.0625H2.8125V15.1875H4.5C4.81066 15.1875 5.0625 15.4393 5.0625 15.75C5.0625 16.0607 4.81066 16.3125 4.5 16.3125H2.25C1.93946 16.3124 1.6875 16.0606 1.6875 15.75V13.5C1.6875 13.1894 1.93946 12.9376 2.25 12.9375H3.9375V11.8125H2.25C1.93934 11.8125 1.6875 11.5607 1.6875 11.25C1.6875 10.9393 1.93934 10.6875 2.25 10.6875H4.5ZM15.75 12.9375C16.0607 12.9375 16.3125 13.1893 16.3125 13.5C16.3125 13.8107 16.0607 14.0625 15.75 14.0625H8.25C7.93934 14.0625 7.6875 13.8107 7.6875 13.5C7.6875 13.1893 7.93934 12.9375 8.25 12.9375H15.75ZM15.75 8.4375C16.0607 8.4375 16.3125 8.68934 16.3125 9C16.3125 9.31066 16.0607 9.5625 15.75 9.5625H8.25C7.93934 9.5625 7.6875 9.31066 7.6875 9C7.6875 8.68934 7.93934 8.4375 8.25 8.4375H15.75ZM3.375 1.6875C3.68566 1.6875 3.9375 1.93934 3.9375 2.25V6.1875H4.5C4.81066 6.1875 5.0625 6.43934 5.0625 6.75C5.0625 7.06066 4.81066 7.3125 4.5 7.3125H2.25C1.93934 7.3125 1.6875 7.06066 1.6875 6.75C1.6875 6.43934 1.93934 6.1875 2.25 6.1875H2.8125V2.8125H2.25C1.93934 2.8125 1.6875 2.56066 1.6875 2.25C1.6875 1.93934 1.93934 1.6875 2.25 1.6875H3.375ZM15.75 3.9375C16.0607 3.9375 16.3125 4.18934 16.3125 4.5C16.3125 4.81066 16.0607 5.0625 15.75 5.0625H8.25C7.93934 5.0625 7.6875 4.81066 7.6875 4.5C7.6875 4.18934 7.93934 3.9375 8.25 3.9375H15.75Z\"/\u003E\n                    \u003C/svg\u003E"}}}};
+//# sourceURL=ekit-core-js-extra
+</script>
+<script id="ekit-core-js" src="../assets/js/24_core.js"></script>
+<script id="ekit-nav-menu-js" src="../assets/js/39_nav-menu.js"></script>
+<script id="ekit-pro-core-js" src="../assets/js/24_core.js"></script>
+<script id="ekit-pro-creative-button-js" src="../assets/js/26_creative-button.js"></script>
+<script id="ekit-pro-vertical-menu-js" src="../assets/js/41_vertical-menu.js"></script>
+<script id="magnific-popup-js" src="../assets/js/35_jquery.magnific-popup.min.js"></script>
+<script id="ekit-header-search-js" src="../assets/js/44_header-search.js"></script>
+<script id="ekit-header-offcanvas-js" src="../assets/js/45_header-offcanvas.js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://demo.awaikenthemes.com/finsta/wp-includes/js/wp-emoji-release.min.js?ver=7.1.3"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://demo.awaikenthemes.com/finsta/wp-includes/js/wp-emoji-loader.min.js
+</script>
+</body>
+</html>
