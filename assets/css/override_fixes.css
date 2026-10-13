@@ -62,3 +62,15 @@
     visibility: visible !important;
     opacity: 1 !important;
 }
+
+
+/* Hide floating Buy Now panel and buttons */
+.explore_theme_panel,
+.btn-buynow,
+.btn-doc,
+.animated-arrow {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
