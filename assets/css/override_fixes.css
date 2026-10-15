@@ -125,52 +125,49 @@
     padding: 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important;
-}
-
-/* Firm Credentials Blue Box & Items */
-.ca-main-blue-box {
-    background-color: var(--e-global-color-accent, #164ae5) !important;
-    border-radius: 20px !important;
-    padding: 22px 20px !important;
-    color: #ffffff !important;
-    box-shadow: 0 10px 30px rgba(22, 74, 229, 0.2) !important;
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
+    gap: 8px !important;
     height: 100% !important;
-    min-height: 520px !important;
-    box-sizing: border-box !important;
-    position: relative !important;
-    overflow: hidden !important;
-    transition: all 0.35s ease !important;
+    justify-content: space-between !important;
 }
 
-.ca-main-blue-box:hover {
-    box-shadow: 0 16px 40px rgba(2, 22, 35, 0.28) !important;
-    transform: translateY(-3px) !important;
+@media (max-width: 767px) {
+    .elementor-4074 .elementor-element.elementor-element-b5f4dbe,
+    .elementor-element-b5f4dbe {
+        height: auto !important;
+        gap: 10px !important;
+        justify-content: flex-start !important;
+        margin-top: 15px !important;
+    }
 }
 
-.ca-item-row {
+/* Individual Firm Credential Badge Boxes */
+.ca-badge-box {
+    background-color: var(--e-global-color-accent, #164ae5) !important;
+    border-radius: 14px !important;
+    padding: 10px 16px !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(22, 74, 229, 0.22) !important;
     display: flex !important;
     align-items: center !important;
     gap: 14px !important;
-    padding: 8px 12px !important;
-    border-radius: 12px !important;
-    transition: all 0.25s ease !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
     cursor: default !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
 }
 
-.ca-item-row:hover {
-    background-color: rgba(2, 22, 35, 0.35) !important;
-    transform: translateX(4px) !important;
+.ca-badge-box:hover {
+    background-color: var(--e-global-color-primary, #021623) !important;
+    box-shadow: 0 10px 24px rgba(2, 22, 35, 0.32) !important;
+    transform: translateY(-2px) scale(1.01) !important;
 }
 
-.ca-item-icon {
-    width: 40px !important;
-    height: 40px !important;
-    min-width: 40px !important;
+.ca-badge-box .ca-badge-icon {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
     border-radius: 50% !important;
     background-color: var(--e-global-color-primary, #021623) !important;
     color: #ffffff !important;
@@ -179,15 +176,16 @@
     align-items: center !important;
     justify-content: center !important;
     flex-shrink: 0 !important;
-    transition: all 0.25s ease !important;
+    transition: all 0.3s ease !important;
 }
 
-.ca-item-row:hover .ca-item-icon {
+.ca-badge-box:hover .ca-badge-icon {
     background-color: #ffffff !important;
     color: var(--e-global-color-primary, #021623) !important;
     fill: var(--e-global-color-primary, #021623) !important;
-    transform: scale(1.08) !important;
+    transform: scale(1.1) !important;
 }
+
 
 
 
