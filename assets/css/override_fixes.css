@@ -203,8 +203,8 @@
     .elementor-4074 .elementor-element.elementor-element-c23171a,
     .elementor-4074 .elementor-element.elementor-element-7a8ad20,
     .elementor-4074 .elementor-element.service-card-4-metal,
-    .elementor-4074 .elementor-element.elementor-element-b0a22ae > .e-con-child,
-    .elementor-element-b0a22ae > .e-con-child {
+    .elementor-4074 .elementor-element.elementor-element-b0a22ae > .e-child,
+    .elementor-element-b0a22ae > .e-child {
         --width: calc(25% - 18px) !important;
         width: calc(25% - 18px) !important;
         max-width: calc(25% - 18px) !important;
@@ -222,8 +222,8 @@
     .elementor-4074 .elementor-element.elementor-element-c23171a,
     .elementor-4074 .elementor-element.elementor-element-7a8ad20,
     .elementor-4074 .elementor-element.service-card-4-metal,
-    .elementor-4074 .elementor-element.elementor-element-b0a22ae > .e-con-child,
-    .elementor-element-b0a22ae > .e-con-child {
+    .elementor-4074 .elementor-element.elementor-element-b0a22ae > .e-child,
+    .elementor-element-b0a22ae > .e-child {
         --width: calc(50% - 12px) !important;
         width: calc(50% - 12px) !important;
         max-width: calc(50% - 12px) !important;
@@ -240,8 +240,8 @@
     .elementor-4074 .elementor-element.elementor-element-c23171a,
     .elementor-4074 .elementor-element.elementor-element-7a8ad20,
     .elementor-4074 .elementor-element.service-card-4-metal,
-    .elementor-4074 .elementor-element.elementor-element-b0a22ae > .e-con-child,
-    .elementor-element-b0a22ae > .e-con-child {
+    .elementor-4074 .elementor-element.elementor-element-b0a22ae > .e-child,
+    .elementor-element-b0a22ae > .e-child {
         --width: 100% !important;
         width: 100% !important;
         max-width: 100% !important;
@@ -252,14 +252,23 @@
     }
 }
 
-.elementor-4074 .elementor-element.elementor-element-b0a22ae > .e-con-child .elementskit-infobox,
-.elementor-element-b0a22ae > .e-con-child .elementskit-infobox {
+.elementor-4074 .elementor-element.elementor-element-b0a22ae > .e-child,
+.elementor-element-b0a22ae > .e-child {
+    padding: 0 !important;
+    --padding-top: 0px !important;
+    --padding-bottom: 0px !important;
+    --padding-left: 0px !important;
+    --padding-right: 0px !important;
+}
+
+.elementor-4074 .elementor-element.elementor-element-b0a22ae > .e-child .elementskit-infobox,
+.elementor-element-b0a22ae > .e-child .elementskit-infobox {
     height: 100% !important;
     min-height: 480px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
-    padding: 28px 22px !important;
+    padding: 30px !important;
     box-sizing: border-box !important;
 }
 
@@ -285,8 +294,13 @@
     border-radius: 20px !important;
     position: relative !important;
     overflow: hidden !important;
-    background-image: url("../images/service-image-4-metal.jpg") !important;
-    background-position: center center !important;
+    padding: 0 !important;
+    --padding-top: 0px !important;
+    --padding-bottom: 0px !important;
+    --padding-left: 0px !important;
+    --padding-right: 0px !important;
+    background-image: url("../images/services_service-image-6.jpg") !important;
+    background-position: right center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
 }
@@ -300,12 +314,49 @@
     background-image: linear-gradient(180deg, #00000000 40.1%, #021623E6 89%) !important;
     border-radius: 20px !important;
     pointer-events: none !important;
+    z-index: 1 !important;
 }
 
 .service-card-4-metal .elementskit-infobox {
     background-color: #FFFFFF00 !important;
     position: relative !important;
-    z-index: 1 !important;
+    z-index: 2 !important;
+    padding: 30px !important;
+    height: 100% !important;
+    min-height: 480px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-sizing: border-box !important;
+}
+
+.service-card-4-metal .elementskit-box-header {
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.service-card-4-metal .elementskit-box-header .elementskit-info-box-icon,
+.service-card-4-metal .elementskit-info-box-icon {
+    color: var(--e-global-color-white, #ffffff) !important;
+    fill: var(--e-global-color-white, #ffffff) !important;
+    background-color: var(--e-global-color-accent, #164ae5) !important;
+    border-radius: 50% !important;
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 24px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    transition: all 0.4s ease-in-out !important;
+}
+
+.service-card-4-metal .elementskit-infobox:hover .elementskit-info-box-icon {
+    color: var(--e-global-color-primary, #021623) !important;
+    fill: var(--e-global-color-primary, #021623) !important;
+    background-color: var(--e-global-color-white, #ffffff) !important;
 }
 
 .service-card-4-metal .elementskit-btn {
@@ -331,25 +382,6 @@
     color: var(--e-global-color-white, #ffffff) !important;
     font-family: var(--e-global-typography-text-font-family, 'Plus Jakarta Sans', sans-serif) !important;
     font-weight: var(--e-global-typography-text-font-weight, 400) !important;
-}
-
-.service-card-4-metal .elementskit-info-box-icon {
-    color: var(--e-global-color-white, #ffffff) !important;
-    fill: var(--e-global-color-white, #ffffff) !important;
-    background-color: var(--e-global-color-accent, #164ae5) !important;
-    border-radius: 50% !important;
-    width: 50px !important;
-    height: 50px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    transition: all 0.4s ease-in-out !important;
-}
-
-.service-card-4-metal .elementskit-infobox:hover .elementskit-info-box-icon {
-    color: var(--e-global-color-primary, #021623) !important;
-    fill: var(--e-global-color-primary, #021623) !important;
-    background-color: var(--e-global-color-white, #ffffff) !important;
 }
 
 .service-card-4-metal .elementskit-btn svg {
