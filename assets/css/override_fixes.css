@@ -387,3 +387,10 @@
 .service-card-4-metal .elementskit-btn svg {
     margin-left: 10px !important;
 }
+
+/* Hide 'Watch Our Story' section */
+.elementor-element-75f407a,
+.elementor-element-57082b6,
+.elementor-element-4e0b932 {
+    display: none !important;
+}
