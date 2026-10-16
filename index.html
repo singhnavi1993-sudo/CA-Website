@@ -404,210 +404,681 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<div class="elementor-element elementor-element-b1e9ab2 e-flex e-con-boxed e-con e-parent" data-e-type="container" data-element_type="container" data-id="b1e9ab2">
+<div class="elementor-element elementor-element-b1e9ab2 e-flex e-con-boxed e-con e-parent" data-e-type="container" data-element_type="container" data-id="b1e9ab2" id="asc-about-section">
+<style>
+/* ─── NEW ABOUT US SECTION (MATCHING SCREENSHOT 2) ─── */
+#asc-about-section {
+  padding: 80px 15px !important;
+  background-color: #ffffff;
+}
+#asc-about-section .e-con-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  max-width: 1200px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+/* Header */
+.asc-about-header {
+  margin-bottom: 32px;
+  text-align: left;
+}
+.asc-about-pill {
+  display: inline-block;
+  background-color: #f1f5f9;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #021623;
+  margin-bottom: 14px;
+  font-family: var(--e-global-typography-primary-font-family, 'Plus Jakarta Sans', sans-serif);
+}
+.asc-about-title {
+  font-family: var(--e-global-typography-primary-font-family, 'Plus Jakarta Sans', sans-serif);
+  font-size: 38px;
+  font-weight: 700;
+  color: #021623;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px 0;
+}
+.asc-about-subtitle {
+  font-family: var(--e-global-typography-text-font-family, 'Outfit', sans-serif);
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #526071;
+  max-width: 680px;
+  margin: 0;
+}
+
+/* Main Grid: Left Visuals & Right Card */
+.asc-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.08fr;
+  gap: 28px;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* Left Column: Two Photos + Badge */
+.asc-visual-col {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 14px;
+  align-items: stretch;
+}
+.asc-visual-sub-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+.asc-img-box-1 {
+  flex: 1;
+  min-height: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(2, 22, 35, 0.06);
+  position: relative;
+  background-color: #e2e8f0;
+}
+.asc-img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.asc-img-box-1:hover .asc-img-cover,
+.asc-img-box-2:hover .asc-img-cover {
+  transform: scale(1.03);
+}
+.asc-badge-excellence {
+  background: #164ae5;
+  border-radius: 14px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(22, 74, 229, 0.28);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+.asc-badge-excellence:hover {
+  background: #021623;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(2, 22, 35, 0.3);
+}
+.asc-badge-icon-wrap {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.asc-badge-text {
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  font-family: var(--e-global-typography-primary-font-family, 'Plus Jakarta Sans', sans-serif);
+  white-space: nowrap;
+}
+.asc-visual-sub-right {
+  height: 100%;
+}
+.asc-img-box-2 {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(2, 22, 35, 0.06);
+  position: relative;
+  background-color: #e2e8f0;
+}
+
+/* Right Column: Tabbed Feature Card */
+.asc-card-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.asc-tab-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  padding-left: 14px;
+  margin-bottom: -1px;
+  z-index: 2;
+}
+.asc-tab-btn {
+  border: none;
+  outline: none;
+  padding: 10px 26px;
+  border-radius: 12px 12px 0 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--e-global-typography-primary-font-family, 'Plus Jakarta Sans', sans-serif);
+  background: rgba(22, 74, 229, 0.08);
+  color: #4b5563;
+  transition: all 0.25s ease;
+}
+.asc-tab-btn.active {
+  background: #edf3fa;
+  color: #164ae5;
+  font-weight: 700;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.02);
+}
+.asc-tab-card-body {
+  background: #edf3fa;
+  border-radius: 16px;
+  padding: 28px 32px 24px 32px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(22, 74, 229, 0.05);
+  box-sizing: border-box;
+}
+.asc-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.asc-feature-item:last-of-type {
+  margin-bottom: 12px;
+}
+.asc-feature-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  background: #164ae5;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  box-shadow: 0 4px 12px rgba(22, 74, 229, 0.28);
+  flex-shrink: 0;
+}
+.asc-feature-content {
+  flex: 1;
+}
+.asc-feature-title {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #021623;
+  margin: 0 0 5px 0;
+  font-family: var(--e-global-typography-primary-font-family, 'Plus Jakarta Sans', sans-serif);
+}
+.asc-feature-desc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #4b5563;
+  margin: 0;
+  font-family: var(--e-global-typography-text-font-family, 'Outfit', sans-serif);
+}
+.asc-btn-action-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.asc-more-btn {
+  background: #164ae5;
+  color: #ffffff !important;
+  border-radius: 100px;
+  padding: 7px 8px 7px 20px;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(22, 74, 229, 0.25);
+  font-family: var(--e-global-typography-primary-font-family, 'Plus Jakarta Sans', sans-serif);
+}
+.asc-more-btn:hover {
+  background: #021623;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(2, 22, 35, 0.3);
+}
+.asc-arrow-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #164ae5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.asc-more-btn:hover .asc-arrow-circle {
+  color: #021623;
+  transform: translateX(2px);
+}
+
+/* Bottom Row: Impact Strip & Leadership */
+.asc-bottom-row {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 24px;
+  margin-top: 28px;
+  width: 100%;
+  align-items: stretch;
+}
+.asc-section-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #021623;
+  margin-bottom: 10px;
+  letter-spacing: -0.2px;
+  font-family: var(--e-global-typography-primary-font-family, 'Plus Jakarta Sans', sans-serif);
+}
+.asc-impact-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: 16px 22px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  gap: 16px;
+  align-items: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  height: calc(100% - 32px);
+  box-sizing: border-box;
+}
+.asc-stat-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 2px 10px;
+  border-right: 1px solid rgba(0, 0, 0, 0.06);
+}
+.asc-stat-item:last-child {
+  border-right: none;
+}
+.asc-stat-exp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.asc-stat-number {
+  font-size: 27px;
+  font-weight: 800;
+  color: #021623;
+  line-height: 1;
+  font-family: var(--e-global-typography-primary-font-family, 'Plus Jakarta Sans', sans-serif);
+}
+.asc-stat-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4b5563;
+  margin-top: 4px;
+  line-height: 1.3;
+  font-family: var(--e-global-typography-primary-font-family, 'Plus Jakarta Sans', sans-serif);
+}
+.asc-stat-sub {
+  font-size: 11px;
+  color: #9ca3af;
+  font-weight: 500;
+  margin-top: 2px;
+}
+.asc-stat-badge-icon {
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.asc-stat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.asc-stat-number-sm {
+  font-size: 18px;
+  font-weight: 800;
+  color: #021623;
+  line-height: 1.1;
+  font-family: var(--e-global-typography-primary-font-family, 'Plus Jakarta Sans', sans-serif);
+}
+.asc-stat-sub-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  margin-top: 5px;
+  font-family: var(--e-global-typography-text-font-family, 'Outfit', sans-serif);
+}
+.asc-icon-blue {
+  color: #164ae5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.asc-icon-muted {
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.asc-lead-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  height: calc(100% - 32px);
+  box-sizing: border-box;
+}
+.asc-leader-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+.asc-leader-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.asc-leader-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.asc-leader-name {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #021623;
+  line-height: 1.25;
+  max-width: 85px;
+  font-family: var(--e-global-typography-primary-font-family, 'Plus Jakarta Sans', sans-serif);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .asc-main-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .asc-bottom-row {
+    grid-template-columns: 1fr;
+  }
+  .asc-impact-card, .asc-lead-card {
+    height: auto;
+  }
+}
+@media (max-width: 767px) {
+  .asc-about-title {
+    font-size: 28px;
+  }
+  .asc-visual-col {
+    grid-template-columns: 1fr;
+  }
+  .asc-impact-card {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .asc-stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding-bottom: 10px;
+  }
+  .asc-stat-item:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+}
+@media (max-width: 480px) {
+  .asc-impact-card {
+    grid-template-columns: 1fr;
+  }
+  .asc-stat-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .asc-stat-item:last-child {
+    border-bottom: none;
+  }
+}
+</style>
+
 <div class="e-con-inner">
-<div class="elementor-element elementor-element-47b2664 e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="47b2664">
-<div class="elementor-element elementor-element-b8e80cb section-title at-heading-animation at-animation-heading-none elementor-invisible elementor-widget elementor-widget-heading" data-e-type="widget" data-element_type="widget" data-id="b8e80cb" data-settings='{"_animation":"fadeInUp","ekit_we_effect_on":"none"}' data-widget_type="heading.default">
-<h3 class="elementor-heading-title elementor-size-default">About Us</h3> </div>
-<div class="elementor-element elementor-element-cb08a32 at-heading-animation at-animation-heading-style-3 elementor-widget elementor-widget-heading" data-e-type="widget" data-element_type="widget" data-id="cb08a32" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="heading.default">
-<h2 class="elementor-heading-title elementor-size-default">Guiding you toward financial growth and stability</h2> </div>
-<div class="elementor-element elementor-element-edcaacb elementor-invisible elementor-widget elementor-widget-text-editor" data-e-type="widget" data-element_type="widget" data-id="edcaacb" data-settings='{"_animation":"fadeInUp","_animation_delay":100,"ekit_we_effect_on":"none"}' data-widget_type="text-editor.default">
-<p>Our collective of passionate wealth specialists and enterprise strategists focuses on empowering people and companies to gain clear economic insight.</p> </div>
-<div class="elementor-element elementor-element-127475e e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="127475e">
-<div class="elementor-element elementor-element-d5114e6 e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="d5114e6">
-<div class="elementor-element elementor-element-30a8e6d ekit-equal-height-disable elementor-invisible elementor-widget elementor-widget-elementskit-icon-box" data-e-type="widget" data-element_type="widget" data-id="30a8e6d" data-settings='{"_animation":"fadeInUp","_animation_delay":200,"ekit_we_effect_on":"none"}' data-widget_type="elementskit-icon-box.default">
-<div class="ekit-wid-con"> <!-- link opening -->
-<!-- end link opening -->
-<div class="elementskit-infobox text-left text-left icon-lef-right-aligin elementor-animation- media">
-<div class="elementskit-box-header elementor-animation-">
-<div class="elementskit-info-box-icon text-center">
-<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M11.8595 6.94384C13.0628 6.91884 14.2511 7.21665 15.3009 7.80516C16.3505 8.39374 17.2247 9.25197 17.8311 10.2915V10.2925C18.4373 11.332 18.7546 12.5149 18.7501 13.7183V13.7241C18.7348 14.9654 18.3769 16.1787 17.7169 17.23C17.1408 18.1475 16.3535 18.9103 15.4239 19.4575V22.0317C15.4144 22.4014 15.2611 22.753 14.9962 23.0112C14.7314 23.2693 14.3759 23.4136 14.0059 23.4136H9.99422C9.6242 23.4136 9.26882 23.2693 9.00399 23.0112C8.73907 22.753 8.58574 22.4015 8.57625 22.0317C8.57609 22.0253 8.57527 22.0186 8.57527 22.0122V19.5083C7.67834 18.9801 6.91304 18.2514 6.34285 17.3755C5.68626 16.3668 5.31141 15.2008 5.25692 13.9985C5.20244 12.7961 5.47057 11.6005 6.03328 10.5366C6.59591 9.47298 7.43292 8.57936 8.45711 7.94774C9.48147 7.31612 10.6563 6.96889 11.8595 6.94384ZM11.8907 8.44384C10.9549 8.46332 10.041 8.73284 9.24422 9.22411C8.44754 9.71542 7.79705 10.4114 7.35945 11.2388C6.92194 12.0661 6.71364 12.9952 6.75594 13.9302C6.79831 14.8652 7.08906 15.7726 7.59969 16.5571C8.1104 17.3417 8.82229 17.9749 9.66024 18.3921C9.91495 18.5189 10.0753 18.7794 10.0753 19.064V21.9136H13.9239V19.0122C13.924 18.7278 14.0854 18.4681 14.3399 18.3413C15.2041 17.911 15.9329 17.2506 16.4464 16.4331L16.628 16.1206C17.0254 15.3789 17.2397 14.5504 17.2501 13.7056C17.2523 12.7719 17.0057 11.8539 16.5352 11.0474C16.0635 10.2388 15.3838 9.57151 14.5675 9.11376C13.7509 8.65597 12.8267 8.42439 11.8907 8.44384Z"></path><path d="M11.25 3.95996V1.38867C11.25 0.974458 11.5858 0.638672 12 0.638672C12.4142 0.638672 12.75 0.974458 12.75 1.38867V3.95996C12.75 4.37417 12.4142 4.70996 12 4.70996C11.5858 4.70996 11.25 4.37417 11.25 3.95996Z"></path><path d="M18.3234 3.31172C18.6148 3.01771 19.0897 3.01571 19.384 3.30683C19.6782 3.59835 19.6804 4.0741 19.3889 4.36836L17.5725 6.20234C17.2809 6.4966 16.8052 6.49874 16.5109 6.20722C16.217 5.91579 16.2149 5.44089 16.5061 5.14668L18.3234 3.31172Z"></path><path d="M22.7646 8.4043C23.1789 8.4043 23.5146 8.74008 23.5146 9.1543C23.5146 9.56851 23.1789 9.9043 22.7646 9.9043H20.1934C19.7791 9.9043 19.4434 9.56851 19.4434 9.1543C19.4434 8.74008 19.7791 8.4043 20.1934 8.4043H22.7646Z"></path><path d="M4.61467 3.30705C4.90892 3.01555 5.38467 3.01772 5.67619 3.31193L7.4926 5.1469C7.78411 5.44116 7.78198 5.91593 7.48772 6.20744C7.19344 6.49879 6.71863 6.49675 6.42717 6.20256L4.60979 4.36858C4.31829 4.07433 4.32046 3.59857 4.61467 3.30705Z"></path><path d="M3.80566 8.4043C4.21988 8.4043 4.55566 8.74008 4.55566 9.1543C4.55566 9.56851 4.21988 9.9043 3.80566 9.9043H1.23438C0.820161 9.9043 0.484375 9.56851 0.484375 9.1543C0.484375 8.74008 0.820161 8.4043 1.23438 8.4043H3.80566Z"></path></svg>
-</div>
-</div>
-<div class="box-body">
-<h3 class="elementskit-info-box-title">
-                    Vision                </h3>
-<p>To be the most trusted Chartered Accountancy firm, empowering businesses and individuals with clarity, compliance, and strategic financial insight for sustainable growth.</p>
-</div>
-</div>
-</div> </div>
-<div class="elementor-element elementor-element-0658c75 ekit-equal-height-disable elementor-invisible elementor-widget elementor-widget-elementskit-icon-box" data-e-type="widget" data-element_type="widget" data-id="0658c75" data-settings='{"_animation":"fadeInUp","_animation_delay":300,"ekit_we_effect_on":"none"}' data-widget_type="elementskit-icon-box.default">
-<div class="ekit-wid-con"> <!-- link opening -->
-<!-- end link opening -->
-<div class="elementskit-infobox text-left text-left icon-lef-right-aligin elementor-animation- media">
-<div class="elementskit-box-header elementor-animation-">
-<div class="elementskit-info-box-icon text-center">
-<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M22.3926 21.4287V18C22.3926 17.5859 22.7285 17.2502 23.1426 17.25C23.5568 17.25 23.8926 17.5858 23.8926 18V21.4287C23.8925 22.0823 23.6328 22.7089 23.1709 23.1709C22.7089 23.6328 22.0823 23.8925 21.4287 23.8926H18C17.5858 23.8926 17.25 23.5568 17.25 23.1426C17.2502 22.7285 17.5859 22.3926 18 22.3926H21.4287C21.6842 22.3925 21.9295 22.2912 22.1104 22.1104C22.2912 21.9295 22.3925 21.6842 22.3926 21.4287Z"></path><path d="M22.3926 6V2.57129C22.3925 2.31578 22.2911 2.0705 22.1104 1.88965C21.9296 1.70895 21.6843 1.60745 21.4287 1.60742H18C17.5858 1.60742 17.25 1.27164 17.25 0.857422C17.25 0.443208 17.5858 0.107422 18 0.107422H21.4287C22.0821 0.107451 22.7088 0.367075 23.1709 0.829102C23.6327 1.29105 23.8925 1.91778 23.8926 2.57129V6C23.8926 6.41421 23.5568 6.75 23.1426 6.75C22.7285 6.74983 22.3926 6.41411 22.3926 6Z"></path><path d="M0.107422 6V2.57129C0.107533 1.91786 0.367069 1.29115 0.829102 0.829102C1.29115 0.367053 1.91788 0.107532 2.57129 0.107422H6C6.41421 0.107422 6.75 0.443208 6.75 0.857422C6.75 1.27164 6.41421 1.60742 6 1.60742H2.57129C2.3157 1.60753 2.07038 1.70891 1.88965 1.88965C1.70891 2.0704 1.60753 2.3157 1.60742 2.57129V6C1.60742 6.41421 1.27164 6.75 0.857422 6.75C0.443208 6.75 0.107422 6.41421 0.107422 6Z"></path><path d="M0.107422 21.4287V18C0.107422 17.5858 0.443208 17.25 0.857422 17.25C1.27164 17.25 1.60742 17.5858 1.60742 18V21.4287C1.60745 21.6843 1.70895 21.9296 1.88965 22.1104C2.07048 22.2911 2.31579 22.3925 2.57129 22.3926H6C6.41411 22.3926 6.74983 22.7285 6.75 23.1426C6.75 23.5568 6.41421 23.8926 6 23.8926H2.57129C1.91779 23.8925 1.29105 23.6327 0.829102 23.1709C0.367079 22.7088 0.107451 22.0821 0.107422 21.4287Z"></path><path d="M11.9989 6.10742C14.4302 6.10742 16.5381 7.55384 17.9726 8.87793C18.7027 9.55193 19.2903 10.2239 19.6952 10.7266C19.898 10.9783 20.0564 11.1894 20.165 11.3389C20.2191 11.4135 20.261 11.4729 20.29 11.5146C20.3044 11.5355 20.3162 11.5518 20.3241 11.5635C20.3281 11.5693 20.3306 11.5747 20.3329 11.5781C20.334 11.5798 20.3351 11.581 20.3359 11.582L20.3378 11.584L20.3925 11.6816C20.5029 11.9167 20.4847 12.1955 20.3378 12.416L19.7138 12L20.3378 12.417H20.3368L20.3359 12.4189C20.3351 12.42 20.334 12.4213 20.3329 12.4229C20.3307 12.4262 20.3279 12.4309 20.3241 12.4365C20.3162 12.4482 20.3045 12.4654 20.29 12.4863C20.261 12.5281 20.2191 12.5875 20.165 12.6621C20.0564 12.8116 19.8981 13.0225 19.6952 13.2744C19.2903 13.7771 18.7028 14.449 17.9726 15.123C16.5381 16.4471 14.4302 17.8936 11.9989 17.8936C9.56789 17.8934 7.46062 16.447 6.02628 15.123C5.29605 14.449 4.70855 13.7771 4.30363 13.2744C4.10074 13.0226 3.94249 12.8116 3.8339 12.6621C3.77977 12.5876 3.73789 12.5281 3.7089 12.4863C3.6944 12.4654 3.68267 12.4482 3.67472 12.4365C3.67091 12.4309 3.66819 12.4262 3.66593 12.4229C3.6649 12.4213 3.6637 12.42 3.663 12.4189L3.66203 12.417H3.66105C3.6609 12.4168 3.66104 12.416 4.28507 12L3.66105 12.416C3.49324 12.1641 3.49315 11.8358 3.66105 11.584L3.663 11.582C3.66365 11.5811 3.66399 11.5796 3.66495 11.5781C3.66726 11.5747 3.67074 11.5693 3.67472 11.5635C3.68267 11.5518 3.69445 11.5355 3.7089 11.5146C3.73788 11.4729 3.77972 11.4135 3.8339 11.3389C3.94246 11.1894 4.10079 10.9784 4.30363 10.7266C4.70853 10.2239 5.29611 9.55196 6.02628 8.87793C7.46062 7.55392 9.56785 6.10758 11.9989 6.10742ZM11.9989 7.60742C10.1448 7.60758 8.39502 8.73233 7.04386 9.97949C6.38125 10.5911 5.84346 11.2054 5.4716 11.667C5.37227 11.7903 5.28509 11.9023 5.21085 12C5.28508 12.0977 5.37226 12.2097 5.4716 12.333C5.84346 12.7946 6.38124 13.4089 7.04386 14.0205C8.39506 15.2678 10.1447 16.3934 11.9989 16.3936C13.8534 16.3936 15.6037 15.2678 16.955 14.0205C17.6176 13.4089 18.1554 12.7946 18.5273 12.333C18.6264 12.2099 18.7129 12.0976 18.787 12C18.7129 11.9024 18.6264 11.7901 18.5273 11.667C18.1554 11.2054 17.6176 10.5911 16.955 9.97949C15.6037 8.73221 13.8533 7.60742 11.9989 7.60742Z"></path><path d="M12.1064 12.001C12.1064 11.9419 12.0591 11.8937 12 11.8936C11.9407 11.8936 11.8926 11.9419 11.8926 12.001C11.8928 12.0599 11.9408 12.1074 12 12.1074C12.059 12.1073 12.1063 12.0599 12.1064 12.001ZM13.6064 12.001C13.6063 12.8884 12.8874 13.6073 12 13.6074C11.1126 13.6074 10.3928 12.8886 10.3926 12.001C10.3926 11.1132 11.1125 10.3936 12 10.3936C12.8875 10.3937 13.6064 11.1134 13.6064 12.001Z"></path></svg>
-</div>
-</div>
-<div class="box-body">
-<h3 class="elementskit-info-box-title">
-                    Philosophy                </h3>
-<p>At Ajay Sawhney &amp; Co., we uphold integrity, precision, and client-centric excellence. We simplify complexity, ensure full regulatory compliance, and deliver practical solutions that strengthen financial health. Through ethical practice, continuous expertise, and transparent partnerships, we build lasting relationships and help clients navigate challenges with confidence.</p>
-</div>
-</div>
-</div> </div>
-</div>
-<div class="elementor-element elementor-element-c4bf27e elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-counter" data-e-type="widget" data-element_type="widget" data-id="c4bf27e" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="counter.default">
-<div class="elementor-counter">
-<div class="elementor-counter-title" style="display: flex; flex-direction: column; align-items: flex-start;"><span>Years of Experience</span><span class="elementor-counter-est" style="font-size: 16px; font-weight: 500; color: var(--e-global-color-text); margin-top: 4px; line-height: 1.2;">Est. 1990</span></div> <div class="elementor-counter-number-wrapper">
-<span class="elementor-counter-number-prefix"></span>
-<span class="elementor-counter-number" data-delimiter="," data-duration="2000" data-from-value="0" data-to-value="36">0</span>
-<span class="elementor-counter-number-suffix">+</span>
-</div>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-c70ef11 e-con-full e-flex elementor-invisible e-con e-child" data-e-type="container" data-element_type="container" data-id="c70ef11" data-settings='{"animation":"fadeInUp","animation_delay":400}'>
-<div class="elementor-element elementor-element-8d02322 elementor-widget elementor-widget-elementskit-creative-button" data-e-type="widget" data-element_type="widget" data-id="8d02322" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-creative-button.default">
-<div class="elementor-widget-container">
-<div class="ekit-wid-con"> <div class="ekit-btn-wraper">
-<a class="ekit_creative_button ekit_position_aware" data-text="" href="About_Us.html" id="" style="flex-direction: row-reverse;">
-<span class="ekit_creative_button_icon_wrapper">
-<svg fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M16.01 9.16687C13.9621 9.16687 12.0956 7.31603 12.0956 5.28353V4.4502H10.4156V5.28353C10.4156 6.76186 11.0691 8.14853 12.0947 9.16687H1.72998V10.8335H12.0947C11.0691 11.8519 10.4156 13.2385 10.4156 14.7169V15.5502H12.0956V14.7169C12.0956 12.6844 13.9621 10.8335 16.01 10.8335H16.85V9.16687H16.01Z" fill-rule="evenodd"></path></svg> </span>
-<span class="ekit_creative_button_text">More About Us</span>
-<span class="ekit_position_aware_bg"></span> </a>
-</div>
-</div> </div>
-</div>
-<div class="elementor-element elementor-element-27a01cc secondary-font-family ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-e-type="widget" data-element_type="widget" data-id="27a01cc" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-icon-box.default">
-<div class="ekit-wid-con"> <!-- link opening -->
-<!-- end link opening -->
-<div class="elementskit-infobox text-left text-left icon-lef-right-aligin elementor-animation- media">
-<div class="elementskit-box-header">
-<div class="elementskit-info-box-icon text-center">
-<img alt="" class="attachment- size-" decoding="async" height="50" loading="eager" src="assets/images/6_author-1.jpg" width="50"/> </div>
-</div>
-<div class="box-body">
-<h3 class="elementskit-info-box-title">
-                    FCA Ajay Sawhney                </h3>
-<p>Managing Partner</p>
-</div>
-</div>
-</div> </div>
-<div class="elementor-element elementor-element-27a01cc secondary-font-family ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-e-type="widget" data-element_type="widget" data-id="27a01cc-partner2" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-icon-box.default">
-<div class="ekit-wid-con"> <!-- link opening -->
-<!-- end link opening -->
-<div class="elementskit-infobox text-left text-left icon-lef-right-aligin elementor-animation- media">
-<div class="elementskit-box-header">
-<div class="elementskit-info-box-icon text-center">
-<img alt="" class="attachment- size-" decoding="async" height="50" loading="eager" src="assets/images/7_author-2.jpg" width="50"/> </div>
-</div>
-<div class="box-body">
-<h3 class="elementskit-info-box-title">
-                    FCA Arun Verma                </h3>
-<p>Senior Partner</p>
-</div>
-</div>
-</div> </div>
-</div>
-</div>
-<div class="elementor-element elementor-element-7378cda e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="7378cda">
-<div class="elementor-element elementor-element-1f19e38 e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="1f19e38">
-<div class="elementor-element elementor-element-ea96a87 e-con-full image-height e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="ea96a87">
-<div class="elementor-element elementor-element-cc10860 at-shiny-glass-effect about-us-image-1-metal image-height at-image-animation at-animation-image-none elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="cc10860" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="image.default">
-<img alt="" class="attachment-full size-full wp-image-5850" decoding="async" height="497" loading="eager" sizes="(max-width: 346px) 100vw, 346px" src="assets/images/9_about-image-1-metal.jpg" srcset="assets/images/9_about-image-1-metal.jpg 346w, assets/images/10_about-image-1-metal-209x300.jpg 209w" width="346"/> </div>
-</div>
-<div class="elementor-element elementor-element-8a24bb2 elementor-widget__width-initial secondary-font-family ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-e-type="widget" data-element_type="widget" data-id="8a24bb2" data-settings='{"ekit_we_effect_on":"none"}' data-widget_type="elementskit-icon-box.default">
-<div class="ekit-wid-con"> <!-- link opening -->
-<!-- end link opening -->
-<div class="elementskit-infobox text-left text-left icon-lef-right-aligin elementor-animation- media">
-<div class="elementskit-box-header elementor-animation-">
-<div class="elementskit-info-box-icon text-center">
-<svg fill="currentColor" height="24" viewbox="0 0 19 24" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M17.1426 14.0877V9.32212C17.1427 7.40066 16.4358 5.54553 15.1562 4.11216C14.8806 3.8032 14.907 3.32938 15.2158 3.05356C15.5248 2.77772 15.9995 2.80511 16.2754 3.11411C17.8002 4.82236 18.6427 7.03239 18.6426 9.32212V14.0877C18.6425 15.3116 18.4018 16.5235 17.9336 17.6542C17.4651 18.785 16.7776 19.8129 15.9121 20.6786C15.0467 21.5439 14.0195 22.2307 12.8887 22.6991C11.7578 23.1676 10.5454 23.409 9.32129 23.409C8.90713 23.409 8.57137 23.0732 8.57129 22.659C8.57129 22.2448 8.90708 21.909 9.32129 21.909C10.3484 21.909 11.3656 21.7064 12.3145 21.3133C13.2633 20.9204 14.1253 20.3442 14.8516 19.618C15.5778 18.8917 16.1547 18.0298 16.5479 17.0809C16.9408 16.1321 17.1425 15.1148 17.1426 14.0877Z"></path><path d="M5.51135e-07 11.2246C5.51135e-07 10.8104 0.335787 10.4746 0.750001 10.4746C1.16421 10.4746 1.5 10.8104 1.5 11.2246V14.0879C1.49955 15.5314 1.89883 16.9448 2.65039 18.1729L2.80469 18.416L2.96875 18.6533C3.80862 19.8227 4.95677 20.7388 6.28711 21.2988C6.6687 21.4596 6.84721 21.8996 6.68652 22.2812C6.52582 22.6628 6.08673 22.8421 5.70508 22.6816C4.01385 21.9697 2.56951 20.774 1.55469 19.2451C0.540049 17.7164 -0.000630139 15.9218 5.51135e-07 14.0869V11.2246Z"></path><path d="M6.90845 0.317489C9.2963 -0.322305 11.8407 0.0131192 13.9817 1.24913C14.3404 1.45623 14.4632 1.91482 14.2561 2.27354C14.0489 2.63209 13.5903 2.75502 13.2317 2.54796C11.4353 1.51092 9.30063 1.22992 7.29712 1.76671C5.29362 2.30352 3.58534 3.6141 2.5481 5.41026L2.54712 5.41124C2.12079 6.14755 1.82041 6.95017 1.65747 7.78526C1.57802 8.19165 1.18404 8.45636 0.777589 8.37706C0.37121 8.29777 0.105808 7.90452 0.184815 7.49815C0.379633 6.4997 0.739522 5.53966 1.24927 4.65929C2.48543 2.51908 4.52108 0.95722 6.90845 0.317489Z"></path><path d="M12.8566 12.7491V9.97961C12.8634 9.44806 12.7511 8.92185 12.5275 8.43957C12.3318 8.01751 12.0558 7.63805 11.715 7.32336L11.5646 7.1925C11.1544 6.85429 10.6735 6.61213 10.1574 6.48449C9.64114 6.35686 9.10276 6.34711 8.58219 6.45519C8.17666 6.53932 7.77966 6.27869 7.69547 5.87316C7.61134 5.46763 7.87197 5.07063 8.2775 4.98644C9.01787 4.83275 9.78363 4.84694 10.5177 5.02843C11.2516 5.20996 11.9354 5.55429 12.5187 6.03527C13.1022 6.51631 13.5707 7.12184 13.8888 7.80773C14.2056 8.49086 14.3649 9.23657 14.3566 9.98937V12.7491C14.3566 13.1634 14.0208 13.4991 13.6066 13.4991C13.1925 13.499 12.8566 13.1632 12.8566 12.7491Z"></path><path d="M5.0358 13.4179L5.78482 13.4306C5.77342 14.1506 5.98258 14.8569 6.38346 15.455C6.78455 16.0534 7.3594 16.5152 8.02994 16.7782C8.70049 17.0411 9.4356 17.0928 10.1364 16.9267C10.8372 16.7605 11.4707 16.3844 11.9518 15.8486C12.2286 15.5405 12.7022 15.5152 13.0104 15.7919C13.3185 16.0686 13.3445 16.5423 13.068 16.8505C12.3827 17.6139 11.4803 18.15 10.4821 18.3866C9.48389 18.6233 8.43717 18.5492 7.48209 18.1747C6.52703 17.8001 5.70859 17.1422 5.13736 16.29V16.2909C4.5661 15.4388 4.26942 14.4319 4.2858 13.4062V9.98918C4.28261 9.30024 4.41873 8.61779 4.68717 7.98332C4.84859 7.60185 5.2891 7.42345 5.67057 7.58488C6.05184 7.74632 6.23021 8.18595 6.069 8.5673C5.87925 9.0157 5.78313 9.49833 5.7858 9.98527V13.4306L5.0358 13.4179Z"></path><path d="M8.57129 13.041V10.1777C8.57129 9.76352 8.90708 9.42773 9.32129 9.42773C9.7355 9.42773 10.0713 9.76352 10.0713 10.1777V13.041L10.0674 13.1172C10.029 13.4954 9.70966 13.791 9.32129 13.791C8.93292 13.791 8.61355 13.4954 8.5752 13.1172L8.57129 13.041Z"></path></svg>
-</div>
-</div>
-<div class="box-body">
-<h3 class="elementskit-info-box-title">
-                    Excellence In Service                </h3>
-</div>
-</div>
-</div> </div>
-</div>
-<div class="elementor-element elementor-element-b5f4dbe e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="b5f4dbe" style="flex: 1 1 auto; width: auto; min-width: 280px; margin: 0; padding: 0;">
-  <!-- 1 -->
-  <div class="ca-badge-box at-shiny-glass-effect" style="background-color: #164ae5 !important; border-radius: 14px !important; padding: 10px 16px !important; color: #ffffff !important; box-shadow: 0 4px 15px rgba(22, 74, 229, 0.22) !important; display: flex !important; align-items: center !important; gap: 14px !important; width: 100% !important; box-sizing: border-box !important; position: relative !important; overflow: hidden !important; cursor: default !important; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;">
-    <div class="ca-badge-icon" style="width: 38px; height: 38px; min-width: 38px; border-radius: 50%; background-color: #021623; color: #ffffff; fill: #ffffff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s ease;">
-      <svg fill="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+  <!-- Top Header -->
+  <div class="asc-about-header">
+    <div class="asc-about-pill">About Us</div>
+    <h2 class="asc-about-title">Guiding you toward financial growth and stability</h2>
+    <p class="asc-about-subtitle">Our collective of passionate wealth specialists and enterprise strategists focuses on empowering people and companies to gain clear economic insight.</p>
+  </div>
+
+  <!-- Middle Grid: Left Dual Images & Right Tabbed Card -->
+  <div class="asc-main-grid">
+    <!-- Left Column: Visual Showcase -->
+    <div class="asc-visual-col">
+      <div class="asc-visual-sub-left">
+        <div class="asc-img-box-1">
+          <img alt="Financial Analytics Presentation" class="asc-img-cover" src="assets/images/9_about-image-1-metal.jpg"/>
+        </div>
+        <div class="asc-badge-excellence">
+          <div class="asc-badge-icon-wrap">
+            <svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+            </svg>
+          </div>
+          <span class="asc-badge-text">Excellence in Service</span>
+        </div>
+      </div>
+      <div class="asc-visual-sub-right">
+        <div class="asc-img-box-2">
+          <img alt="Consultation & Strategy Meeting" class="asc-img-cover" src="assets/images/11_about-image-2-metal.jpg"/>
+        </div>
+      </div>
     </div>
-    <div style="display: flex; flex-direction: column; min-width: 0;">
-      <span style="color: #ffffff; font-size: 14.5px; font-weight: 600; line-height: 1.25em; font-family: 'Plus Jakarta Sans', sans-serif;">42+ Staff Strength</span>
-      <span style="color: rgba(255, 255, 255, 0.88); font-size: 11.5px; font-weight: 400; line-height: 1.3em; margin-top: 1px; font-family: 'Outfit', sans-serif;">Qualified, semi-qualified &amp; Support staff</span>
+
+    <!-- Right Column: Interactive Tabbed Card -->
+    <div class="asc-card-col">
+      <div class="asc-tab-header">
+        <button class="asc-tab-btn active" data-tab="tab-vision" type="button">Vision</button>
+        <button class="asc-tab-btn" data-tab="tab-philosophy" type="button">Philosophy</button>
+      </div>
+      <div class="asc-tab-card-body">
+        <!-- Tab 1: Vision & Philosophy (matches Screenshot 2) -->
+        <div class="asc-tab-pane active" id="tab-vision">
+          <!-- Vision Item -->
+          <div class="asc-feature-item">
+            <div class="asc-feature-icon">
+              <svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm-2 18v1c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-1h-4zm5-6.27V16H9v-2.27A5.006 5.006 0 017 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.95-.91 3.68-2.31 4.73z"/>
+              </svg>
+            </div>
+            <div class="asc-feature-content">
+              <h4 class="asc-feature-title">Vision</h4>
+              <p class="asc-feature-desc">To be the most trusted Chartered Accountancy firm, empowering businesses and individuals with clarity, compliance, and strategic financial insight for sustainable growth.</p>
+            </div>
+          </div>
+
+          <!-- Philosophy Item -->
+          <div class="asc-feature-item">
+            <div class="asc-feature-icon">
+              <svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20">
+                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+              </svg>
+            </div>
+            <div class="asc-feature-content">
+              <h4 class="asc-feature-title">Philosophy</h4>
+              <p class="asc-feature-desc">At Ajay Sawhney &amp; Co., we uphold integrity, precision, and client-centric excellence. We simplify complexity, ensure full regulatory compliance, and deliver practical solutions that strengthen financial health. Through ethical practice, continuous expertise, and transparent partnerships, we build lasting relationships and help clients navigate challenges with confidence.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Dedicated Philosophy / Mission view -->
+        <div class="asc-tab-pane" id="tab-philosophy" style="display: none;">
+          <div class="asc-feature-item">
+            <div class="asc-feature-icon">
+              <svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+              </svg>
+            </div>
+            <div class="asc-feature-content">
+              <h4 class="asc-feature-title">Our Mission</h4>
+              <p class="asc-feature-desc">To provide unparalleled financial advisory, statutory auditing, and taxation services that drive sustainable corporate value, protect business assets, and guide enterprises through changing regulatory landscapes.</p>
+            </div>
+          </div>
+          <div class="asc-feature-item">
+            <div class="asc-feature-icon">
+              <svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+              </svg>
+            </div>
+            <div class="asc-feature-content">
+              <h4 class="asc-feature-title">Core Values</h4>
+              <p class="asc-feature-desc">Integrity in every calculation, transparency in every client relationship, and unwavering dedication to professional standards set by the Institute of Chartered Accountants of India (ICAI).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="asc-btn-action-wrap">
+          <a class="asc-more-btn" href="About_Us.html">
+            <span>More About Us</span>
+            <span class="asc-arrow-circle">
+              <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
-  <!-- 2 -->
-  <div class="ca-badge-box at-shiny-glass-effect" style="background-color: #164ae5 !important; border-radius: 14px !important; padding: 10px 16px !important; color: #ffffff !important; box-shadow: 0 4px 15px rgba(22, 74, 229, 0.22) !important; display: flex !important; align-items: center !important; gap: 14px !important; width: 100% !important; box-sizing: border-box !important; position: relative !important; overflow: hidden !important; cursor: default !important; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;">
-    <div class="ca-badge-icon" style="width: 38px; height: 38px; min-width: 38px; border-radius: 50%; background-color: #021623; color: #ffffff; fill: #ffffff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s ease;">
-      <svg fill="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+
+  <!-- Bottom Row: Impact Strip & Leadership Team -->
+  <div class="asc-bottom-row">
+    <!-- Left: Impact Strip -->
+    <div class="asc-impact-col">
+      <div class="asc-section-label">Impact Strip</div>
+      <div class="asc-impact-card">
+        <!-- Stat 1 -->
+        <div class="asc-stat-item asc-stat-exp">
+          <div>
+            <div class="asc-stat-number">36+</div>
+            <div class="asc-stat-title">Years of Experience</div>
+            <div class="asc-stat-sub">Est. 1990</div>
+          </div>
+          <div class="asc-stat-badge-icon">
+            <svg fill="none" height="34" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24" width="34">
+              <path d="M12 15a6 6 0 100-12 6 6 0 000 12z"/>
+              <path d="M8.21 13.89L7 21l5-3 5 3-1.21-7.11"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="asc-stat-item">
+          <div class="asc-stat-header">
+            <span class="asc-stat-number-sm">11+ Cities</span>
+            <div class="asc-icon-blue">
+              <svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="asc-stat-sub-text">Pan-India</div>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="asc-stat-item">
+          <div class="asc-stat-header">
+            <div class="asc-icon-blue">
+              <svg fill="currentColor" height="22" viewbox="0 0 24 24" width="22">
+                <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94A5.01 5.01 0 0011 15.9V19H7v2h10v-2h-4v-3.1a5.01 5.01 0 003.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+              </svg>
+            </div>
+            <span class="asc-stat-number-sm">18</span>
+          </div>
+          <div class="asc-stat-sub-text">Partners</div>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="asc-stat-item">
+          <div class="asc-stat-header">
+            <span class="asc-stat-number-sm">Top 10</span>
+            <div class="asc-icon-muted">
+              <svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20">
+                <path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="asc-stat-sub-text">C&amp;AG Ranking</div>
+        </div>
+      </div>
     </div>
-    <div style="display: flex; flex-direction: column; min-width: 0;">
-      <span style="color: #ffffff; font-size: 14.5px; font-weight: 600; line-height: 1.25em; font-family: 'Plus Jakarta Sans', sans-serif;">C&amp;AG Ranking</span>
-      <span style="color: rgba(255, 255, 255, 0.88); font-size: 11.5px; font-weight: 400; line-height: 1.3em; margin-top: 1px; font-family: 'Outfit', sans-serif;">Ranking - Major Audit Eligible Firm</span>
-    </div>
-  </div>
-  <!-- 3 -->
-  <div class="ca-badge-box at-shiny-glass-effect" style="background-color: #164ae5 !important; border-radius: 14px !important; padding: 10px 16px !important; color: #ffffff !important; box-shadow: 0 4px 15px rgba(22, 74, 229, 0.22) !important; display: flex !important; align-items: center !important; gap: 14px !important; width: 100% !important; box-sizing: border-box !important; position: relative !important; overflow: hidden !important; cursor: default !important; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;">
-    <div class="ca-badge-icon" style="width: 38px; height: 38px; min-width: 38px; border-radius: 50%; background-color: #021623; color: #ffffff; fill: #ffffff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s ease;">
-      <svg fill="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
-    </div>
-    <div style="display: flex; flex-direction: column; min-width: 0;">
-      <span style="color: #ffffff; font-size: 14.5px; font-weight: 600; line-height: 1.25em; font-family: 'Plus Jakarta Sans', sans-serif;">18 Partners</span>
-      <span style="color: rgba(255, 255, 255, 0.88); font-size: 11.5px; font-weight: 400; line-height: 1.3em; margin-top: 1px; font-family: 'Outfit', sans-serif;">Leading the firm across India</span>
-    </div>
-  </div>
-  <!-- 4 -->
-  <div class="ca-badge-box at-shiny-glass-effect" style="background-color: #164ae5 !important; border-radius: 14px !important; padding: 10px 16px !important; color: #ffffff !important; box-shadow: 0 4px 15px rgba(22, 74, 229, 0.22) !important; display: flex !important; align-items: center !important; gap: 14px !important; width: 100% !important; box-sizing: border-box !important; position: relative !important; overflow: hidden !important; cursor: default !important; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;">
-    <div class="ca-badge-icon" style="width: 38px; height: 38px; min-width: 38px; border-radius: 50%; background-color: #021623; color: #ffffff; fill: #ffffff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s ease;">
-      <svg fill="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-    </div>
-    <div style="display: flex; flex-direction: column; min-width: 0;">
-      <span style="color: #ffffff; font-size: 14.5px; font-weight: 600; line-height: 1.25em; font-family: 'Plus Jakarta Sans', sans-serif;">11+ Cities</span>
-      <span style="color: rgba(255, 255, 255, 0.88); font-size: 11.5px; font-weight: 400; line-height: 1.3em; margin-top: 1px; font-family: 'Outfit', sans-serif;">Pan-India branch network</span>
-    </div>
-  </div>
-  <!-- 5 -->
-  <div class="ca-badge-box at-shiny-glass-effect" style="background-color: #164ae5 !important; border-radius: 14px !important; padding: 10px 16px !important; color: #ffffff !important; box-shadow: 0 4px 15px rgba(22, 74, 229, 0.22) !important; display: flex !important; align-items: center !important; gap: 14px !important; width: 100% !important; box-sizing: border-box !important; position: relative !important; overflow: hidden !important; cursor: default !important; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;">
-    <div class="ca-badge-icon" style="width: 38px; height: 38px; min-width: 38px; border-radius: 50%; background-color: #021623; color: #ffffff; fill: #ffffff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s ease;">
-      <svg fill="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M4 10v7h3v-7H4zm6 0v7h3v-7h-3zM2 22h19v-3H2v3zm14-12v7h3v-7h-3zm-4.5-9L2 6v2h19V6l-9.5-5z"/></svg>
-    </div>
-    <div style="display: flex; flex-direction: column; min-width: 0;">
-      <span style="color: #ffffff; font-size: 14.5px; font-weight: 600; line-height: 1.25em; font-family: 'Plus Jakarta Sans', sans-serif;">Category 1</span>
-      <span style="color: rgba(255, 255, 255, 0.88); font-size: 11.5px; font-weight: 400; line-height: 1.3em; margin-top: 1px; font-family: 'Outfit', sans-serif;">RBI Category – Category 1 Firm</span>
-    </div>
-  </div>
-  <!-- 6 -->
-  <div class="ca-badge-box at-shiny-glass-effect" style="background-color: #164ae5 !important; border-radius: 14px !important; padding: 10px 16px !important; color: #ffffff !important; box-shadow: 0 4px 15px rgba(22, 74, 229, 0.22) !important; display: flex !important; align-items: center !important; gap: 14px !important; width: 100% !important; box-sizing: border-box !important; position: relative !important; overflow: hidden !important; cursor: default !important; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;">
-    <div class="ca-badge-icon" style="width: 38px; height: 38px; min-width: 38px; border-radius: 50%; background-color: #021623; color: #ffffff; fill: #ffffff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s ease;">
-      <svg fill="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-    </div>
-    <div style="display: flex; flex-direction: column; min-width: 0;">
-      <span style="color: #ffffff; font-size: 14.5px; font-weight: 600; line-height: 1.25em; font-family: 'Plus Jakarta Sans', sans-serif;">ICAI Reg.No. 09833N</span>
-      <span style="color: rgba(255, 255, 255, 0.88); font-size: 11.5px; font-weight: 400; line-height: 1.3em; margin-top: 1px; font-family: 'Outfit', sans-serif;">The Institute of Chartered Accountants of India</span>
-    </div>
-  </div>
-  <!-- 7 -->
-  <div class="ca-badge-box at-shiny-glass-effect" style="background-color: #164ae5 !important; border-radius: 14px !important; padding: 10px 16px !important; color: #ffffff !important; box-shadow: 0 4px 15px rgba(22, 74, 229, 0.22) !important; display: flex !important; align-items: center !important; gap: 14px !important; width: 100% !important; box-sizing: border-box !important; position: relative !important; overflow: hidden !important; cursor: default !important; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;">
-    <div class="ca-badge-icon" style="width: 38px; height: 38px; min-width: 38px; border-radius: 50%; background-color: #021623; color: #ffffff; fill: #ffffff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s ease;">
-      <svg fill="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-    </div>
-    <div style="display: flex; flex-direction: column; min-width: 0;">
-      <span style="color: #ffffff; font-size: 14.5px; font-weight: 600; line-height: 1.25em; font-family: 'Plus Jakarta Sans', sans-serif;">MEF Category-1</span>
-      <span style="color: rgba(255, 255, 255, 0.88); font-size: 11.5px; font-weight: 400; line-height: 1.3em; margin-top: 1px; font-family: 'Outfit', sans-serif;">Major Empanelled Firm</span>
-    </div>
-  </div>
-  <!-- 8 -->
-  <div class="ca-badge-box at-shiny-glass-effect" style="background-color: #164ae5 !important; border-radius: 14px !important; padding: 10px 16px !important; color: #ffffff !important; box-shadow: 0 4px 15px rgba(22, 74, 229, 0.22) !important; display: flex !important; align-items: center !important; gap: 14px !important; width: 100% !important; box-sizing: border-box !important; position: relative !important; overflow: hidden !important; cursor: default !important; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;">
-    <div class="ca-badge-icon" style="width: 38px; height: 38px; min-width: 38px; border-radius: 50%; background-color: #021623; color: #ffffff; fill: #ffffff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s ease;">
-      <svg fill="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
-    </div>
-    <div style="display: flex; flex-direction: column; min-width: 0;">
-      <span style="color: #ffffff; font-size: 14.5px; font-weight: 600; line-height: 1.25em; font-family: 'Plus Jakarta Sans', sans-serif;">RBI Code 0150129</span>
-      <span style="color: rgba(255, 255, 255, 0.88); font-size: 11.5px; font-weight: 400; line-height: 1.3em; margin-top: 1px; font-family: 'Outfit', sans-serif;">Reserve Bank of India</span>
+
+    <!-- Right: Leadership Team -->
+    <div class="asc-lead-col">
+      <div class="asc-section-label">Leadership Team</div>
+      <div class="asc-lead-card">
+        <div class="asc-leader-item">
+          <div class="asc-leader-avatar">
+            <img alt="FCA Ajay Sawhney" src="assets/images/6_author-1.jpg"/>
+          </div>
+          <div class="asc-leader-name">FCA Ajay Sawhney</div>
+        </div>
+        <div class="asc-leader-item">
+          <div class="asc-leader-avatar">
+            <img alt="FCA Arun Verma" src="assets/images/7_author-2.jpg"/>
+          </div>
+          <div class="asc-leader-name">FCA Arun Verma</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-</div>
-</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tabBtns = document.querySelectorAll('.asc-tab-btn');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const targetTab = this.getAttribute('data-tab');
+      tabBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      document.querySelectorAll('.asc-tab-pane').forEach(pane => {
+        if (pane.id === targetTab) {
+          pane.style.display = 'block';
+          pane.classList.add('active');
+        } else {
+          pane.style.display = 'none';
+          pane.classList.remove('active');
+        }
+      });
+    });
+  });
+});
+</script>
 </div>
 <div class="elementor-element elementor-element-2468a5a e-flex e-con-boxed e-con e-parent" data-e-type="container" data-element_type="container" data-id="2468a5a">
 <div class="e-con-inner">
@@ -735,7 +1206,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </div>
 </div>
 </div>
-<div class="elementor-element elementor-element-7855750 e-flex e-con-boxed e-con e-parent" data-e-type="container" data-element_type="container" data-id="7855750">
+<!-- Why Choose Us Section (Hidden) -->
+<div class="elementor-element elementor-element-7855750 e-flex e-con-boxed e-con e-parent" data-e-type="container" data-element_type="container" data-id="7855750" style="display: none !important;">
 <div class="e-con-inner">
 <div class="elementor-element elementor-element-fdd1925 e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="fdd1925" data-settings='{"background_background":"classic"}'>
 <div class="elementor-element elementor-element-2951e0c e-con-full e-flex e-con e-child" data-e-type="container" data-element_type="container" data-id="2951e0c">
